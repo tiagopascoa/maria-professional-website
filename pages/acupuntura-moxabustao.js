@@ -1,4 +1,4 @@
-import S from "./styles";
+import S from "../styles/styles"
 import Link from "next/link";
 //Data
 import { acupuntureAndMoxaImgs } from "../data/pages";
