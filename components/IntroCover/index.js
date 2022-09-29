@@ -1,7 +1,15 @@
 import S from "./styles";
 import Link from "next/link";
-//data
-import { coverTherapies } from "../../data/IntroCover";
+
+const coverTherapies = [
+    "Acupuntura",
+    "Moxabustão",
+    "Massagem Tui Na",
+    "Ventosaterapia",
+    "Fitoterapia",
+    "Dietética e Emagrecimento",
+    "Acupuntura Facial",
+  ];
 
 const IntroCover = () => {
   return (
