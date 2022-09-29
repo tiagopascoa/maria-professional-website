@@ -7,7 +7,7 @@ const styles = {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
     scroll-margin-top: 7rem;
   `,
   Title: styled.h1`

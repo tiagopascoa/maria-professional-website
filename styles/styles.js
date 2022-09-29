@@ -78,6 +78,10 @@ const styles = {
     font-size: 1.5rem;
     color: #ffffff;
   `,
+  SubTitle2: styled.h3`
+    font-size: 1.35rem;
+    color: #ffffff;
+  `, 
   Text: styled.p`
     font-size: 1rem;
     color: #ffffff;

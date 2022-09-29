@@ -10,21 +10,26 @@ const About = () => {
           <S.LastName>C. Moreira</S.LastName>
         </S.NameContainer>
         <S.ImageContainer>
-        <Image
-                    src= "/images/about/maria_perfil2.jpg"
-                    alt="Maria Moreira acupuntura"
-                    layout="fill"
-                    objectFit="cover"
-                  />
+          <Image
+            src="/images/about/maria_perfil2.jpg"
+            alt="Maria Moreira acupuntura"
+            layout="fill"
+            objectFit="cover"
+          />
         </S.ImageContainer>
-        <S.LogoContainer>
-        <S.StyledImage
-                src="/images/about/lotus2.png"
-                alt="Maria C. Moreira"
-                width={175}
-                height={125}
-              />
-        </S.LogoContainer>
+        <S.LogoGridElement>
+          <S.LogoContainer>
+            <S.StyledImage
+              src="/images/about/logo_about_svg.svg"
+              alt="Maria C. Moreira"
+              /* width={100} */
+              /* height={100} */
+              layout="fill"
+              objectFit="cover"
+            />
+          </S.LogoContainer>
+        </S.LogoGridElement>
+
         <S.AboutTextContainer>
           <S.AboutTitle>Sobre mim</S.AboutTitle>
           <S.Text>
@@ -39,7 +44,8 @@ const About = () => {
             através desta arte milenar.
           </S.Text>
           <S.Text>
-            Vários cursos e ações de formação, com especializações em áreas como a acupuntura facial e a osteopatia.
+            Vários cursos e ações de formação, com especializações em áreas como
+            a acupuntura facial e a osteopatia.
           </S.Text>
         </S.AboutTextContainer>
       </S.AboutGrid>

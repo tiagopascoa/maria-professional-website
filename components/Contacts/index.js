@@ -24,7 +24,7 @@ const ContactAndBooking = () => {
             </S.ContactRow>
             <S.ContactRow>
               <S.PhoneIcon />
-              <S.InfoText>91 000 00 00</S.InfoText>
+              <S.InfoText>+351 917 174 650</S.InfoText>
             </S.ContactRow>
             <S.ContactRow>
               <S.InstagramIcon />

@@ -8,9 +8,9 @@ const styles = {
     justify-content: center;
     margin-top: 5rem;
     scroll-margin-top: 7rem;
-    /* @media (max-width: 768px) {
-      margin-top: 2.5rem;
-    } */
+    @media (max-width: 768px) {
+      margin-top: 3.5rem;
+    }
   `,
   AboutGrid: styled.div`
     width: 70%;
@@ -35,8 +35,8 @@ const styles = {
     @media (max-width: 768px) {
       grid-column: 2 / 6;
       align-items: center;
-      justify-content: flex-start;
-    
+      justify-content: center;
+      padding-bottom: 1.5rem;
     }
   `,
   ImageContainer: styled.div`
@@ -66,9 +66,9 @@ const styles = {
     @media (max-width: 768px) {
       grid-column: 1 / 6;
     }
-   /*  border-radius: 0.5rem; */
+    /*  border-radius: 0.5rem; */
   `,
-  LogoContainer: styled.div`
+  LogoGridElement: styled.div`
     grid-column: 1 / 3;
     grid-row: 3 / 5;
     display: flex;
@@ -79,8 +79,30 @@ const styles = {
       grid-column: 1 / 3;
       grid-row: 3 / 5;
       position: relative;
-      bottom: 10px;
-      right: 0px;
+      /* bottom: 10px;
+      right: 0px; */
+    }
+  `,
+  LogoContainer: styled.div`
+    /* grid-column: 1 / 3;
+    grid-row: 3 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; */
+    position: relative;
+    width: 90px;
+    height: 90px;
+    top: -0.5px;
+    @media (max-width: 480px) {
+      /* grid-column: 1 / 3; */
+      /* grid-row: 3 / 5; */
+      /* position: relative; */
+      /* bottom: 10px;
+      right: 0px; */
+      width: 75px;
+      height: 75px;
+      top: 0px;
     }
   `,
 
@@ -108,13 +130,17 @@ const styles = {
     display: flex;
     justify-content: center;
     padding-bottom: 1rem;
+    @media (max-width: 480px) {
+      padding-bottom: 0;
+      padding-top: 1rem;
+    }
   `,
   Text: styled.p`
     font-size: 1rem;
     color: #ffffff;
   `,
   StyledImage: styled(Image)`
-    filter: drop-shadow(0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.2));
+    /* filter: drop-shadow(0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.2)); */
   `,
 };
 
