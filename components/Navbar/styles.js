@@ -38,7 +38,7 @@ const styles = {
   `,
   LastName: styled.span`
     font-family: "Trakya500", sans-serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #cc8076;
   `,
   Menu: styled.ul`

@@ -22,7 +22,7 @@ const styles = {
       padding: 0 1.5rem;
     }
   `,
-  NameContainer: styled.div`
+  NameContainer: styled.h1`
     grid-column: 1 / 3;
     /* background-color: #cc8076; */
     display: flex;
@@ -106,22 +106,22 @@ const styles = {
     }
   `,
 
-  FirstName: styled.h1`
+  FirstName: styled.span`
     /* font-family: LuloClean, sans-serif; */
     font-size: 3.5rem;
     color: #cc8076;
-    padding-left: 1.7rem;
+    padding-left: 0.85rem;
     @media (max-width: 768px) {
       font-size: 3rem;
       padding: 0;
     }
   `,
-  LastName: styled.h1`
+  LastName: styled.span`
     /* font-family: LuloClean, sans-serif; */
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: #cc8076;
     @media (max-width: 768px) {
-      font-size: 2.1rem;
+      font-size: 1.7rem;
     }
   `,
   AboutTitle: styled.h2`

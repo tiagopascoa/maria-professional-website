@@ -2,14 +2,14 @@ import S from "./styles";
 import Link from "next/link";
 
 const coverTherapies = [
-    "Acupuntura",
-    "Moxabustão",
-    "Massagem Tui Na",
-    "Ventosaterapia",
-    "Fitoterapia",
-    "Dietética e Emagrecimento",
-    "Acupuntura Facial",
-  ];
+  "Acupuntura",
+  "Moxabustão",
+  "Massagem Tui Na",
+  "Ventosaterapia",
+  "Fitoterapia",
+  "Dietética e Emagrecimento",
+  "Acupuntura Facial",
+];
 
 const IntroCover = () => {
   return (
@@ -23,8 +23,10 @@ const IntroCover = () => {
       />
       <S.TopContainer>
         <S.TitleContainer>
-          <S.Title>Medicina</S.Title>
-          <S.Title secondtitle>Chinesa</S.Title>
+          <S.Title>
+            Medicina <S.SecondTitle>Chinesa</S.SecondTitle>
+          </S.Title>
+          {/* <S.Title secondtitle>Chinesa</S.Title> */}
         </S.TitleContainer>
         <S.SubTitleContainer>
           {coverTherapies.map((therapy, index) => {

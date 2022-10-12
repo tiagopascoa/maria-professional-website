@@ -50,10 +50,14 @@ const styles = {
     /* font-family: LuloClean, sans-serif; */
     font-size: 4rem;
     font-weight: 900;
+    text-align: center;
     color: ${(props) => (props.secondtitle ? "#925f5b" : "#FFFFFF")};
     @media screen and (max-width: 768px) {
       font-size: 3.5rem;
     }
+  `,
+  SecondTitle: styled.span`
+    color: #925f5b;
   `,
   SubTitleContainer: styled.div`
     display: flex;
