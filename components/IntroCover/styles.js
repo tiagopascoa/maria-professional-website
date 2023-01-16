@@ -3,15 +3,6 @@ import Image from "next/image";
 import { GoPrimitiveDot } from "react-icons/go";
 
 const styles = {
-  Section: styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  `,
-  SectionLimits: styled.div`
-    width: 100%;
-    max-width: 1200px;
-  `,
   CoverContainer: styled.section`
     min-height: calc(75vh - 7rem);
     position: relative;

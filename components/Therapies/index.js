@@ -2,12 +2,10 @@ import S from "./styles";
 import Image from "next/image";
 //Swiper
 import Slider from "react-slick";
-//Data
-import { therapiesCardsInfo } from "../../data/cards";
 //Components
 import Card from "../Card";
 
-const Therapies = () => {
+const Therapies = ({ t }) => {
   const settings = {
     dots: true,
     arrows: false,
@@ -45,10 +43,14 @@ const Therapies = () => {
   };
   return (
     <S.TherapiesContainer id="therapies">
-      <S.Title>Terapias</S.Title>
+      <S.Title> {t("home:therapies.therapiesTitle")} </S.Title>
       <S.SwiperContainer>
         <Slider {...settings}>
-          {therapiesCardsInfo.map((card) => {
+          {t(
+            "home:therapies.therapiesCardsInfo",
+            {},
+            { returnObjects: true }
+          ).map((card) => {
             return (
               <Card
                 therapiestyles={+true}
@@ -63,6 +65,7 @@ const Therapies = () => {
                     objectFit="contain"
                   />
                 }
+                t={t}
               />
             );
           })}

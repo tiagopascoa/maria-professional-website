@@ -1,0 +1,12 @@
+{
+  "navBar": {
+    "aboutMe": "About me",
+    "therapies": "Therapies",
+    "treatments": "Treatments",
+    "contacts": "Contacts"
+  },
+  "knowMoreBtn": "Learn more",
+  "footer": {
+    "allRightsReserved": "All rights reserved"
+  }
+}

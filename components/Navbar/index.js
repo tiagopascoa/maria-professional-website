@@ -3,9 +3,11 @@ import S from "./styles";
 import Image from "next/image";
 import Link from "next/link";
 import Hamburger from "hamburger-react";
+import { useRouter } from "next/router";
 
-const Navbar = ({ toggleMobileNav, iconIsOpen, setIconOpen }) => {
-  
+const Navbar = ({ toggleMobileNav, iconIsOpen, setIconOpen, t }) => {
+  const router = useRouter();
+
   return (
     <S.Navbar>
       <Link href="/">
@@ -16,7 +18,6 @@ const Navbar = ({ toggleMobileNav, iconIsOpen, setIconOpen }) => {
               alt="Maria C. Moreira"
               width="100%"
               height="100%"
-              /* objectFit="contain" */
             />
           </S.LogoContainer>
           <S.NameContainer>
@@ -26,39 +27,57 @@ const Navbar = ({ toggleMobileNav, iconIsOpen, setIconOpen }) => {
         </S.BrandContainer>
       </Link>
       <S.MobileIcon onClick={toggleMobileNav}>
-        {/* <S.HamburguerIcon /> */}
-        <Hamburger
-          toggled={iconIsOpen}
-          toggle={setIconOpen}
-          color="#925f5b"
-        />
+        <Hamburger toggled={iconIsOpen} toggle={setIconOpen} color="#925f5b" />
       </S.MobileIcon>
       <S.Menu>
         <S.MenuItems>
           <Link href="/#about" passHref>
-            <S.MenuLink>Sobre mim</S.MenuLink>
-            {/* <S.MenuLink>Maria C. Moreira</S.MenuLink> */}
+            <S.MenuLink>{t("common:navBar.aboutMe")}</S.MenuLink>
           </Link>
         </S.MenuItems>
         <S.MenuItems>
           <Link href="/#therapies" passHref>
-            <S.MenuLink>Terapias</S.MenuLink>
+            <S.MenuLink>{t("common:navBar.therapies")}</S.MenuLink>
           </Link>
         </S.MenuItems>
         <S.MenuItems>
           <Link href="/#treatments" passHref>
-            <S.MenuLink>Tratamentos</S.MenuLink>
+            <S.MenuLink>{t("common:navBar.treatments")}</S.MenuLink>
           </Link>
         </S.MenuItems>
-        {/* <S.MenuItems>
-            <Link href="/">
-              <S.MenuLink>Marcações</S.MenuLink>
-            </Link>
-          </S.MenuItems> */}
         <S.MenuItems>
           <Link href="/#contacts" passHref>
-            <S.MenuLink>Contactos</S.MenuLink>
+            <S.MenuLink>{t("common:navBar.contacts")}</S.MenuLink>
           </Link>
+        </S.MenuItems>
+        <S.MenuItems>
+          <ul style={{ display: "flex", padding: 0 }}>
+            <S.MenuItems>
+              <Link href={router.asPath} locale={router.locales[0]}>
+                <S.MenuLink>
+                  <Image
+                    src="/pt_icon.svg"
+                    alt="português"
+                    width="22"
+                    height="22"
+                  />
+                </S.MenuLink>
+              </Link>
+            </S.MenuItems>
+            <S.IconDivider>|</S.IconDivider>
+            <S.MenuItems>
+              <Link href={router.asPath} locale={router.locales[1]}>
+                <S.MenuLink>
+                  <Image
+                    src="/en_icon.svg"
+                    alt="inglês"
+                    width="22"
+                    height="22"
+                  />
+                </S.MenuLink>
+              </Link>
+            </S.MenuItems>
+          </ul>
         </S.MenuItems>
       </S.Menu>
     </S.Navbar>

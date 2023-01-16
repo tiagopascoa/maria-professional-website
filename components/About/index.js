@@ -1,7 +1,7 @@
 import S from "./styles";
 import Image from "next/image";
 
-const About = () => {
+const About = ({t}) => {
   return (
     <S.AboutContainer id="about">
       <S.AboutGrid>
@@ -31,7 +31,7 @@ const About = () => {
         </S.LogoGridElement>
 
         <S.AboutTextContainer>
-          <S.AboutTitle>Sobre mim</S.AboutTitle>
+          <S.AboutTitle> {t("home:aboutMe.aboutMeTitle")}</S.AboutTitle>
           <S.Text>
             Formada na ESMTC - Escola de Medicina Tradicional Chinesa.
           </S.Text>

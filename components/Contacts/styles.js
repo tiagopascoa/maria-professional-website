@@ -93,6 +93,9 @@ const styles = {
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+    @media (max-width: 375px) {
+      flex-direction: column;
+    }
   `,
   SubTitle: styled.h2`
     font-size: 2rem;
@@ -104,9 +107,7 @@ const styles = {
   InfoText: styled.p`
     color: #ffffff;
     font-size: 1rem;
-    @media (max-width: 400px) {
-      font-size: 1rem;
-    }
+    text-align: center;
   `,
 };
 

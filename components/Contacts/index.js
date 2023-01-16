@@ -2,13 +2,13 @@ import S from "./styles";
 //Components
 import Map from "../Map";
 
-const ContactAndBooking = () => {
+const ContactAndBooking = ({ t }) => {
   return (
     <S.ContactsSection id="contacts">
-      <S.Title>Contactos</S.Title>
+      <S.Title>{t("home:contact.contactTitle")}</S.Title>
       <S.MapAndContacts>
         <S.MapContainer>
-            <Map />
+          <Map />
         </S.MapContainer>
         <S.ContactsColumn>
           <S.ContactsContainer>

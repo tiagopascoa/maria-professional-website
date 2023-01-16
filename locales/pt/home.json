@@ -1,0 +1,96 @@
+{
+  "introCover": {
+    "coverTitle1": "Medicina",
+    "coverTitle2": "Chinesa"
+  },
+  "coverTherapies": [
+    "Acupuntura",
+    "Moxabustão",
+    "Massagem Tui Na",
+    "Ventosaterapia",
+    "Fitoterapia",
+    "Dietética e Emagrecimento",
+    "Acupuntura Facial"
+  ],
+  "aboutMe": {
+    "aboutMeTitle": "Sobre Mim"
+  },
+  "therapies": {
+    "therapiesTitle": "Terapias",
+    "therapiesCardsInfo": [
+      {
+        "title": "Acupuntura e Moxabustão",
+        "image": "/images/cards/acupuntura_icon.png",
+        "alt": "acupuntura",
+        "id": "1",
+        "path": "/acupuntura-moxabustao"
+      },
+
+      {
+        "title": "Ventosaterapia",
+        "image": "/images/cards/ventosas_icon.png",
+        "alt": "ventosas",
+        "id": "2",
+        "path": "/ventosaterapia"
+      },
+      {
+        "title": "Massagem Tui Na",
+        "image": "/images/cards/massagem_icon.png",
+        "alt": "massagem",
+        "id": "3",
+        "path": "/massagem-tuina"
+      },
+      {
+        "title": "Fitoterapia",
+        "image": "/images/cards/fórmulas_icon.png",
+        "alt": "fitoterapia",
+        "id": "4",
+        "path": "/fitoterapia"
+      },
+
+      {
+        "title": "Nutrição e Dietética",
+        "image": "/images/cards/alimentação_icon.png",
+        "alt": "Nutrição e Dietética",
+        "id": "5",
+        "path": "/dietetica"
+      }
+    ]
+  },
+  "treatments": {
+    "treatmentsTitle": "Tratamentos",
+    "treatmentsCardsInfo": [
+      {
+        "title": "Saúde e Estilo de Vida",
+        "image": "/images/cards/tratamento_geral_icon.png",
+        "alt": "saúde e estilo de vida",
+        "id": "6",
+        "path": "/saude-estilo-de-vida"
+      },
+      {
+        "title": "Controlo de Peso",
+        "image": "/images/cards/emagrecimento_icon.png",
+        "alt": "emagrecimento",
+        "id": "7",
+        "path": "/emagrecimento"
+      },
+      {
+        "title": "Rejuvenescimento Facial",
+        "image": "/images/cards/acupuntura_facial_icon.png",
+        "alt": "rejuvenescimento facial",
+        "id": "7",
+        "path": "/rejuvenescimento-facial"
+      },
+      {
+        "title": "Dor e Inflamação",
+        "image": "/images/cards/massagem_terapêutica_icon.png",
+        "alt": "massagem terapêutica",
+        "id": "8",
+        "path": "/dor-inflamacao"
+      }
+    ]
+  },
+  "contact": {
+    "contactTitle": "Contactos"
+  }
+}

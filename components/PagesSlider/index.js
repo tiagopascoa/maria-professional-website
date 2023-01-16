@@ -3,7 +3,7 @@ import S from "./styles";
 import Slider from "react-slick";
 import Image from "next/image";
 
-const PagesSlider = ({ images }) => {
+const PagesSlider = ({ images, treatment }) => {
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
     <S.LeftArrow
       {...props}
@@ -12,6 +12,7 @@ const PagesSlider = ({ images }) => {
       }
       aria-hidden="true"
       aria-disabled={currentSlide === 0 ? true : false}
+      treatment={treatment}
     >
       Previous
     </S.LeftArrow>
@@ -25,6 +26,7 @@ const PagesSlider = ({ images }) => {
       }
       aria-hidden="true"
       aria-disabled={currentSlide === slideCount - 1 ? true : false}
+      treatment={treatment}
     >
       Next
     </S.RightArrow>
@@ -44,7 +46,7 @@ const PagesSlider = ({ images }) => {
   };
 
   return (
-    <S.SwiperContainer>
+    <S.SwiperContainer treatment={treatment}>
       <Slider {...settings}>
         {images.map((img) => (
           <div key={img.id}>
