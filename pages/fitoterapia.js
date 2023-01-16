@@ -1,16 +1,18 @@
-import S from "../styles/styles";
+import S from "../styles/pageStyles";
 import Head from "next/head";
 import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 //Data
-import { fitoterapiaImgs } from "../data/pages";
+import { fitoterapiaImgs } from "../util/pages";
 //Components
 import PagesSlider from "../components/PagesSlider";
 
 const Fitoterapia = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>Terapia - Fitoterapia</title>
+        <title>{t("fitoterapia:headTitle")}</title>
         <meta
           name="description"
           content="Fitoterapia -  Tratamentos de fitoterapia seguindo os princípios da Medicina Chinesa com a terapêuta Maria C. Moreira. Consultas em Lisboa"
@@ -18,38 +20,22 @@ const Fitoterapia = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <S.TheraSection>
-        <S.Title>Fitoterapia</S.Title>
+        <S.Title>{t("fitoterapia:title")}</S.Title>
         <S.Container>
           <PagesSlider images={fitoterapiaImgs} />
           <S.DescriptionContainer>
             <S.Article>
-              <S.SubTitle>Fitoterapia</S.SubTitle>
-              <S.Text>
-                Regendo-se pelos princípios de diagnóstico e tratamento da
-                medicina chinesa, a Fitoterapia consiste na administração de
-                fórmulas, combinações de substâncias de origem vegetal, animal
-                ou mineral de forma a tratar determinada patologia. Outra das
-                ferramentas da Medicina Chinesa com enormes benefícios no
-                tratamento de doenças e sintomatologia crónica.
-              </S.Text>
+              <S.SubTitle>{t("fitoterapia:subTitle1")}</S.SubTitle>
+              <S.Text>{t("fitoterapia:textBlock1")}</S.Text>
             </S.Article>
             <S.Article>
-              <S.SubTitle2>Benefícios:</S.SubTitle2>
+              <S.SubTitle2>{t("fitoterapia:subTitle2")}</S.SubTitle2>
               <S.List>
-                <li>Fadiga Crónica.</li>
-                <li>Apoio à fertilidade.</li>
-                <li>Tensão Pré-Menstrual e Dor Menstrual.</li>
-                <li>Síndrome Ovários Poliquísticos.</li>
-                <li>Insónia.</li>
-                <li>Ansiedade.</li>
-                <li>Dor crónica e aguda.</li>
-                <li>Enxaquecas, dor de cabeça.</li>
-                <li>Alergias (sinusite, rinite).</li>
-                <li>Amigdalite e rouquidão frequente.</li>
-                <li>Dor crónica e aguda.</li>
-                <li>Distúrbios gastro-intestinais.</li>
-                <li>Acne e Eczema.</li>
-                <li>Baixa imunidade.</li>
+                {t("fitoterapia:listItems1", {}, { returnObjects: true }).map(
+                  (item, index) => {
+                    return <li key={index}>{item}</li>;
+                  }
+                )}
               </S.List>
             </S.Article>
           </S.DescriptionContainer>
@@ -58,14 +44,14 @@ const Fitoterapia = () => {
           <S.LinkAndIconContainer>
             <Link href="/massagem-tuina" passHref>
               <S.NavLink>
-                <S.PrevIcon /> Anterior
+                <S.PrevIcon /> {t("fitoterapia:previous")}
               </S.NavLink>
             </Link>
           </S.LinkAndIconContainer>
           <S.LinkAndIconContainer>
             <Link href="/dietetica" passHref>
               <S.NavLink>
-                Próxima <S.NextIcon />
+                {t("fitoterapia:next")} <S.NextIcon />
               </S.NavLink>
             </Link>
           </S.LinkAndIconContainer>

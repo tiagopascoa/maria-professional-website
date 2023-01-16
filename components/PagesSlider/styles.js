@@ -7,7 +7,7 @@ const styles = {
   RightArrow: styled(IoIosArrowDroprightCircle)`
     width: 2rem;
     height: 2rem;
-    color: #925f5b;
+    color: ${({ treatment }) => (treatment ? "#cc8076" : "#925f5b")};
     position: absolute;
     right: -35px;
     :hover {
@@ -17,7 +17,7 @@ const styles = {
   LeftArrow: styled(IoIosArrowDropleftCircle)`
     width: 2rem;
     height: 2rem;
-    color: #925f5b;
+    color: ${({ treatment }) => (treatment ? "#cc8076" : "#925f5b")};
     position: absolute;
     left: -35px;
     :hover {
@@ -43,11 +43,12 @@ const styles = {
       /* font-size: 10px; */
     }
     & .slick-dots li button:before {
-      color: #925f5b;
+      color: ${({ treatment }) => (treatment ? "#cc8076" : "#925f5b")};
     }
     & .slick-dots li.slick-active button:before {
       opacity: 1;
-      color: #925f5b;
+
+      color: ${({ treatment }) => (treatment ? "#cc8076" : "#925f5b")};
     }
     @media (max-width: 768px) {
       width: 75%;

@@ -1,16 +1,18 @@
-import S from "../styles/styles";
+import S from "../styles/pageStyles";
 import Head from "next/head";
 import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 //Data
-import { ventosaterapiaImgs } from "../data/pages";
+import { ventosaterapiaImgs } from "../util/pages";
 //Components
 import PagesSlider from "../components/PagesSlider";
 
 const Ventosaterapia = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>Terapia - Ventosaterapia</title>
+        <title>{t("ventosaterapia:headTitle")}</title>
         <meta
           name="description"
           content="Ventosaterapia - seguindo os princípios da Medicina Chinesa com a terapêuta Maria C. Moreira. Consultas em Lisboa"
@@ -18,59 +20,36 @@ const Ventosaterapia = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <S.TheraSection>
-        <S.Title>Ventosaterapia</S.Title>
+        <S.Title>{t("ventosaterapia:title")}</S.Title>
         <S.Container>
           <PagesSlider images={ventosaterapiaImgs} />
           <S.DescriptionContainer>
             <S.Article>
-              <S.SubTitle>Ventosaterapia</S.SubTitle>
-              <S.Text>
-                Esta técnica consiste na aplicação de copos que podem ser de
-                bambu ou vidro, que com a aplicação de fogo fazem sucção na
-                pele, através do aumento da circulação de Qi e sangue local e
-                uma maior oxigenação, drenando e relaxando os músculos e
-                ligamentos. É depois da massagem das técnicas preferidas dos
-                pacientes originando uma sensação de bem-estar imediata. Esta
-                técnica pode ser usada em todas as idades desde crianças a
-                idosos.
-              </S.Text>
+              <S.SubTitle>{t("ventosaterapia:subTitle1")}</S.SubTitle>
+              <S.Text>{t("ventosaterapia:textBlock1")}</S.Text>
             </S.Article>
             <S.Article>
-              <S.SubTitle2>Benefícios:</S.SubTitle2>
+              <S.SubTitle2>{t("ventosaterapia:subTitle2")}</S.SubTitle2>
               <S.List>
-                <li>Aumento da circulação sanguínea local.</li>
-                <li>
-                  Eliminação da dor e de contraturas musculares e pontos
-                  gatilho.
-                </li>
-                <li>Fortalece os vasos sanguíneos;</li>
-                <li>
-                  Aumentar a produção de líquido sinovial dentro das
-                  articulações.
-                </li>
-                <li>
-                  Relaxar e acalmar o corpo e a mente, pela sua actuação no
-                  sistema nervoso.
-                </li>
-                <li>
-                  Doenças pulmonares (asma, bronquites, constipações, etc);
-                </li>
-                <li>Desordens gastro-intestinais.</li>
-                <li>
-                  Estético: pode ser usada para combater obesidade e celulite.
-                </li>
+                {t(
+                  "ventosaterapia:listItems1",
+                  {},
+                  { returnObjects: true }
+                ).map((item, index) => {
+                  return <li key={index}>{item}</li>;
+                })}
               </S.List>
             </S.Article>
             <S.Article>
-              {/* <S.Text>Pode ser usada em patologias como:</S.Text> */}
-              <S.SubTitle2>Patologias em que pode ser usada:</S.SubTitle2>
+              <S.SubTitle2>{t("ventosaterapia:subTitle3")}</S.SubTitle2>
               <S.List>
-                <li>Bronquites e asma.</li>
-                <li>
-                  Obstipação, diarreias e outras patologias gastro-intestinais.
-                </li>
-                <li>Depressão, stress e ansiedade.</li>
-                <li>Celulite e obesidade.</li>
+                {t(
+                  "ventosaterapia:listItems2",
+                  {},
+                  { returnObjects: true }
+                ).map((item, index) => {
+                  return <li key={index}>{item}</li>;
+                })}
               </S.List>
             </S.Article>
           </S.DescriptionContainer>
@@ -79,14 +58,14 @@ const Ventosaterapia = () => {
           <S.LinkAndIconContainer>
             <Link href="/acupuntura-moxabustao" passHref>
               <S.NavLink>
-                <S.PrevIcon /> Anterior
+                <S.PrevIcon /> {t("ventosaterapia:previous")}
               </S.NavLink>
             </Link>
           </S.LinkAndIconContainer>
           <S.LinkAndIconContainer>
             <Link href="/massagem-tuina" passHref>
               <S.NavLink>
-                Próxima <S.NextIcon />
+                {t("ventosaterapia:next")} <S.NextIcon />
               </S.NavLink>
             </Link>
           </S.LinkAndIconContainer>

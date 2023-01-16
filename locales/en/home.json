@@ -1,0 +1,96 @@
+{
+  "introCover": {
+    "coverTitle1": "Chinese",
+    "coverTitle2": "Medicine"
+  },
+  "coverTherapies": [
+    "Accupuncture ",
+    "Moxibustion",
+    "Tui Na Massage",
+    "Cupping",
+    "Herbal Therapies",
+    "Dietary and Slimming",
+    "Facial Accupuncture"
+  ],
+  "aboutMe": {
+    "aboutMeTitle": "About Me"
+  },
+  "therapies": {
+    "therapiesTitle": "Therapies",
+    "therapiesCardsInfo": [
+      {
+        "title": "Accupuncture and Moxibustion",
+        "image": "/images/cards/acupuntura_icon.png",
+        "alt": "accupucture and moxibustion",
+        "id": "1",
+        "path": "/acupuntura-moxabustao"
+      },
+
+      {
+        "title": "Cupping",
+        "image": "/images/cards/ventosas_icon.png",
+        "alt": "cupping",
+        "id": "2",
+        "path": "/ventosaterapia"
+      },
+      {
+        "title": "Tui Na Massage",
+        "image": "/images/cards/massagem_icon.png",
+        "alt": "tui na massage",
+        "id": "3",
+        "path": "/massagem-tuina"
+      },
+      {
+        "title": "Herbal Therapies",
+        "image": "/images/cards/fórmulas_icon.png",
+        "alt": "herbal therapies",
+        "id": "4",
+        "path": "/fitoterapia"
+      },
+
+      {
+        "title": "Nutrition and Dietetics",
+        "image": "/images/cards/alimentação_icon.png",
+        "alt": "nutrition and dietetics",
+        "id": "5",
+        "path": "/dietetica"
+      }
+    ]
+  },
+  "treatments": {
+    "treatmentsTitle": "Treatments",
+    "treatmentsCardsInfo": [
+      {
+        "title": "Health and Lifestyle",
+        "image": "/images/cards/tratamento_geral_icon.png",
+        "alt": "health and Lifestyle",
+        "id": "6",
+        "path": "/saude-estilo-de-vida"
+      },
+      {
+        "title": "Slimming",
+        "image": "/images/cards/emagrecimento_icon.png",
+        "alt": "slimming",
+        "id": "7",
+        "path": "/emagrecimento"
+      },
+      {
+        "title": "Anti-aging",
+        "image": "/images/cards/acupuntura_facial_icon.png",
+        "alt": "anti-aging",
+        "id": "7",
+        "path": "/rejuvenescimento-facial"
+      },
+      {
+        "title": "Pain Relief",
+        "image": "/images/cards/massagem_terapêutica_icon.png",
+        "alt": "pain relief",
+        "id": "8",
+        "path": "/dor-inflamacao"
+      }
+    ]
+  },
+  "contact": {
+    "contactTitle": "Contacts"
+  }
+}

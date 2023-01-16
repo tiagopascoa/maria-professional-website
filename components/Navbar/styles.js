@@ -44,6 +44,7 @@ const styles = {
   Menu: styled.ul`
     display: flex;
     gap: 2rem;
+    padding: 0;
     @media screen and (max-width: 900px) {
       display: none;
     }
@@ -74,6 +75,11 @@ const styles = {
   HamburguerIcon: styled(FaBars)`
     color: #925f5b;
   `,
+  IconDivider: styled.span`
+    padding: 0 0.1rem;
+    color: #925f5b;
+    font-size: 17px;
+  ` 
 };
 
 export default styles;

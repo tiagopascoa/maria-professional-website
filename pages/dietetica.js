@@ -1,16 +1,18 @@
-import S from "../styles/styles";
+import S from "../styles/pageStyles";
 import Head from "next/head";
 import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 //Data
-import { dieteticaImgs } from "../data/pages";
+import { dieteticaImgs } from "../util/pages";
 //Components
 import PagesSlider from "../components/PagesSlider";
 
 const Dietetica = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>Terapia - Dietética</title>
+        <title>{t("dietetica:headTitle")}</title>
         <meta
           name="description"
           content="Dietética - Tratamentos de dietética seguindo os princípios da Medicina Chinesa com a terapêuta Maria C. Moreira. Consultas em Lisboa"
@@ -18,40 +20,19 @@ const Dietetica = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <S.TheraSection>
-        <S.Title>Dietética</S.Title>
+        <S.Title>{t("dietetica:title")}</S.Title>
         <S.Container>
           <PagesSlider images={dieteticaImgs} />
           <S.DescriptionContainer>
             <S.Article>
-              <S.SubTitle>Fitoterapia</S.SubTitle>
-              <S.Text>
-                Segundo a Medicina Tradicional Chinesa (MTC), é através da
-                digestão que é extraída a energia necessária ao bom
-                funcionamento do corpo. Ao adequarmos os alimentos ao quadro de
-                cada indivíduo vamos potenciar e melhorar esta produção
-                energética corrigindo deficiências, excessos e bloqueios,
-                melhorando a execução das funções dos orgãos internos.
-              </S.Text>
+              <S.SubTitle>{t("dietetica:subTitle1")}</S.SubTitle>
+              <S.Text>{t("dietetica:textBlock1")}</S.Text>
             </S.Article>
             <S.Article>
-              <S.Text>
-                Não é apenas usada em quadros de obesidade ou anorexia mas
-                também em casos que se veja necessidade de reeducação ou
-                correcção alimentar de forma a melhorar a qualidade de vida e
-                consequentemente a saúde do paciente.
-              </S.Text>
+              <S.Text>{t("dietetica:textBlock2")}</S.Text>
             </S.Article>
             <S.Article>
-              <S.Text>
-                Cada orgão tem associado um sabor e cada alimento tem associado
-                um ou mais sabores. Além dos sabores, cada alimento tem também
-                associada uma natureza ou temperatura, esta não depende da
-                temperatura física do alimento mas sim da que este provoca
-                durante e após a sua digestão. Desta forma, para restabelecer o
-                equilíbrio, são selecionados alimentos e formas de confecção
-                mais adequados ao quadro para potenciar o mecanismo de regulação
-                interna e consequentemente a saúde.
-              </S.Text>
+              <S.Text>{t("dietetica:textBlock3")}</S.Text>
             </S.Article>
           </S.DescriptionContainer>
         </S.Container>
@@ -59,7 +40,7 @@ const Dietetica = () => {
           <S.LinkAndIconContainer>
             <Link href="/fitoterapia" passHref>
               <S.NavLink>
-                <S.PrevIcon /> Anterior
+                <S.PrevIcon /> {t("dietetica:previous")}
               </S.NavLink>
             </Link>
           </S.LinkAndIconContainer>

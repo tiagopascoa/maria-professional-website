@@ -17,6 +17,7 @@ const styles = {
     padding: 2rem 1rem;
   `,
   CopyText: styled.span`
+    text-align: center;
     color: #ffffff;
   `,
 };

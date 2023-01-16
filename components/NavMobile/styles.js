@@ -52,6 +52,11 @@ const styles = {
       transform: 0.2s ease-in-out;
     }
   `,
+  IconDivider: styled.span`
+    padding: 0 0.3rem;
+    color: #925f5b;
+    font-size: 23px;
+  `,
 };
 
 export default styles;

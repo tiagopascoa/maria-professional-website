@@ -5,14 +5,11 @@ import { MdOutlineNavigateBefore } from "react-icons/md";
 const styles = {
   //Icons
   NextIcon: styled(MdOutlineNavigateNext)`
-    /* height: 2.5rem;
-    width: 2.5rem; */
-    color: #925f5b;
+    color: ${({ treatment }) => (treatment ? "#cc8076" : "#925f5b")};
+    
   `,
   PrevIcon: styled(MdOutlineNavigateBefore)`
-    /* height: 2.5rem;
-    width: 2.5rem; */
-    color: #925f5b;
+    color: ${({ treatment }) => (treatment ? "#cc8076" : "#925f5b")};
   `,
   TheraSection: styled.section`
     min-height: calc(100vh - 19rem);
@@ -32,7 +29,7 @@ const styles = {
   `,
   Title: styled.h1`
     font-size: 3.5rem;
-    color: #cc8076;
+    color: ${({ treatment }) => (treatment ? "#925f5b" : "#cc8076")};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,7 +60,7 @@ const styles = {
   `, */
   DescriptionContainer: styled.div`
     width: 100%;
-    background-color: #cc8076;
+    background-color: ${({ treatment }) => (treatment ? "#925f5b" : "#cc8076")};
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -85,7 +82,7 @@ const styles = {
   Text: styled.p`
     font-size: 1rem;
     color: #ffffff;
-    line-height: 21px;
+    line-height: 24px;
   `,
   Article: styled.article`
     display: flex;
@@ -107,7 +104,7 @@ const styles = {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #925f5b;
+    color: ${({ treatment }) => (treatment ? "#cc8076" : "#925f5b")};
     font-size: 1.2rem;
   `,
   LinkAndIconContainer: styled.div`
