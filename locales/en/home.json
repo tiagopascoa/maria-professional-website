@@ -63,28 +63,28 @@
       {
         "title": "Health and Lifestyle",
         "image": "/images/cards/tratamento_geral_icon.png",
-        "alt": "health and Lifestyle",
+        "alt": "Health and Lifestyle",
         "id": "6",
         "path": "/saude-estilo-de-vida"
       },
       {
-        "title": "Slimming",
+        "title": "Weight Management",
         "image": "/images/cards/emagrecimento_icon.png",
-        "alt": "slimming",
+        "alt": "Weight Management",
         "id": "7",
-        "path": "/emagrecimento"
+        "path": "/controlo-de-peso"
       },
       {
         "title": "Anti-aging",
         "image": "/images/cards/acupuntura_facial_icon.png",
-        "alt": "anti-aging",
+        "alt": "Anti-aging",
         "id": "7",
         "path": "/rejuvenescimento-facial"
       },
       {
         "title": "Pain Relief",
         "image": "/images/cards/massagem_terapêutica_icon.png",
-        "alt": "pain relief",
+        "alt": "Pain relief",
         "id": "8",
         "path": "/dor-inflamacao"
       }

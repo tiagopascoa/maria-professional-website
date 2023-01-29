@@ -15,7 +15,7 @@ const Dietetica = () => {
         <title>{t("dietetica:headTitle")}</title>
         <meta
           name="description"
-          content="Dietética - Tratamentos de dietética seguindo os princípios da Medicina Chinesa com a terapêuta Maria C. Moreira. Consultas em Lisboa"
+          content="Dietética - Tratamentos de dietética seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
