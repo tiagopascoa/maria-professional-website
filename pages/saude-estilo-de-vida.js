@@ -9,6 +9,7 @@ import PagesSlider from "../components/PagesSlider";
 
 const SaudeEstiloDeVida = () => {
   const { t } = useTranslation();
+
   return (
     <>
       <Head>
@@ -20,10 +21,10 @@ const SaudeEstiloDeVida = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <S.TheraSection>
-        <S.Title treatment>{t("saude-estilo-de-vida:title")}</S.Title>
+        <S.Title treatment={+true}>{t("saude-estilo-de-vida:title")}</S.Title>
         <S.Container>
-          <PagesSlider images={acupuntureAndMoxaImgs} treatment />
-          <S.DescriptionContainer treatment>
+          <PagesSlider images={acupuntureAndMoxaImgs} treatment={+true} />
+          <S.DescriptionContainer treatment={+true}>
             <S.SubTitle>{t("saude-estilo-de-vida:subTitle1")}</S.SubTitle>
             <S.Article>
               <S.Text>{t("saude-estilo-de-vida:textBlock1")}</S.Text>
@@ -37,13 +38,10 @@ const SaudeEstiloDeVida = () => {
           </S.DescriptionContainer>
         </S.Container>
         <S.NavBtnsContainer>
-          <S.LinkAndIconContainer style={{ marginLeft: "auto" }}>
-            <Link href="/ventosaterapia" passHref>
-              <S.NavLink treatment>
-                <S.Article>
-                  <S.Text>{t("saude-estilo-de-vida:next")}</S.Text>
-                </S.Article>{" "}
-                <S.NextIcon treatment />
+          <S.LinkAndIconContainer style={{ marginLeft: "auto" }} treatment={+true}>
+            <Link href="/" passHref>
+              <S.NavLink treatment={+true}>
+                {t("saude-estilo-de-vida:next")} <S.NextIcon treatment={+true} />
               </S.NavLink>
             </Link>
           </S.LinkAndIconContainer>
