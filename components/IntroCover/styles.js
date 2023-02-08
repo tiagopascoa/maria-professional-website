@@ -4,19 +4,19 @@ import { GoPrimitiveDot } from "react-icons/go";
 
 const styles = {
   CoverContainer: styled.section`
-    min-height: calc(75vh - 7rem);
+    min-height: calc(80vh - 7rem);
     position: relative;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 480px) {
+      min-height: calc(100vh - 7rem);
+    }
   `,
-
   StyledNextImage: styled(Image)`
     z-index: 0;
   `,
   TopContainer: styled.div`
     background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
-    /* background: linear-gradient(rgba(201,128,121,0.2),rgba(201,128,121,0.2)); */
-    /* background: linear-gradient(rgba(146,95,91,0.5),rgba(146,95,91,0.5)); */
     z-index: 1;
     position: relative;
     height: 100%;
@@ -27,6 +27,13 @@ const styles = {
     gap: 3rem;
     flex: 1;
     padding: 1.5rem;
+    @media screen and (max-width: 480px) {
+      gap: 4rem;
+    }
+    @media screen and (max-height: 700px) {
+      gap: 2rem;
+    }
+
   `,
   TitleContainer: styled.div`
     display: flex;
@@ -69,12 +76,6 @@ const styles = {
   SubTitle: styled.h2`
     font-size: 1.2rem;
     color: #ffffff;
-    /* @media screen and (max-width: 768px) {
-      font-size: 1rem;
-    }
-    @media screen and (max-width: 480px) {
-      font-size: 1rem;
-    } */
     @media screen and (max-width: 345px) {
       font-size: 1rem;
     }
@@ -83,23 +84,18 @@ const styles = {
     color: #ffffff;
   `,
   Button: styled.a`
-    /*   */
     cursor: pointer;
     background-color: #925f5b;
     color: #ffffff;
     padding: 0.6rem 1.5rem;
     border-radius: 0.5rem;
     font-size: 1.2rem;
-    /* font-family: LuloClean, sans-serif; */
     transition: all 0.2s ease-in-out;
     outline: none;
     border: none;
     :hover {
       background-color: #cc8076;
     }
-    /* @media screen and (max-width: 480px) {
-      font-size: 1rem;
-    } */
   `,
 };
 

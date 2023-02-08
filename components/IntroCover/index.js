@@ -14,7 +14,7 @@ const IntroCover = ({ t }) => {
       <S.TopContainer>
         <S.TitleContainer>
           <S.Title>
-            {t("home:introCover.coverTitle1")}{" "}
+            {t("home:introCover.coverTitle1")}<br/>
             <S.SecondTitle>{t("home:introCover.coverTitle2")}</S.SecondTitle>
           </S.Title>
           {/* <S.Title secondtitle>Chinesa</S.Title> */}
