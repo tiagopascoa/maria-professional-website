@@ -49,9 +49,9 @@
       },
 
       {
-        "title": "Nutrição e Dietética",
+        "title": "Dietética",
         "image": "/images/cards/alimentação_icon.png",
-        "alt": "Nutrição e Dietética",
+        "alt": "Dietética",
         "id": "5",
         "path": "/dietetica"
       }
@@ -72,7 +72,7 @@
         "image": "/images/cards/emagrecimento_icon.png",
         "alt": "emagrecimento",
         "id": "7",
-        "path": "/emagrecimento"
+        "path": "/controlo-de-peso"
       },
       {
         "title": "Rejuvenescimento Facial",

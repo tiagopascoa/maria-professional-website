@@ -7,13 +7,12 @@ import { acupuntureAndMoxaImgs } from "../util/pages";
 //Components
 import PagesSlider from "../components/PagesSlider";
 
-const SaudeEstiloDeVida = () => {
+const RejuvenescimentoFacial = () => {
   const { t } = useTranslation();
-
   return (
     <>
       <Head>
-        <title>{t("saude-estilo-de-vida:headTitle")}</title>
+        <title>{t("controlo-de-peso:headTitle")}</title>
         <meta
           name="description"
           content="Tratamentos de Saúde e Estilo de Vida seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
@@ -21,27 +20,34 @@ const SaudeEstiloDeVida = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <S.TheraSection>
-        <S.Title treatment={+true}>{t("saude-estilo-de-vida:title")}</S.Title>
+        <S.Title treatment>{t("controlo-de-peso:title")}</S.Title>
         <S.Container>
-          <PagesSlider images={acupuntureAndMoxaImgs} treatment={+true} />
-          <S.DescriptionContainer treatment={+true}>
-            <S.SubTitle>{t("saude-estilo-de-vida:subTitle1")}</S.SubTitle>
+          <PagesSlider images={acupuntureAndMoxaImgs} treatment />
+          <S.DescriptionContainer treatment>
+            <S.SubTitle>{t("controlo-de-peso:subTitle1")}</S.SubTitle>
             <S.Article>
-              <S.Text>{t("saude-estilo-de-vida:textBlock1")}</S.Text>
+              <S.Text>{t("controlo-de-peso:textBlock1")}</S.Text>
             </S.Article>
             <S.Article>
-              <S.Text>{t("saude-estilo-de-vida:textBlock2")}</S.Text>
+              <S.Text>{t("controlo-de-peso:textBlock2")}</S.Text>
             </S.Article>
             <S.Article>
-              <S.Text>{t("saude-estilo-de-vida:textBlock3")}</S.Text>
+              <S.Text>{t("controlo-de-peso:textBlock3")}</S.Text>
             </S.Article>
           </S.DescriptionContainer>
         </S.Container>
         <S.NavBtnsContainer>
-          <S.LinkAndIconContainer style={{ marginLeft: "auto" }}>
-            <Link href="/controlo-de-peso" passHref>
+          <S.LinkAndIconContainer>
+            <Link href="/saude-estilo-de-vida" passHref>
               <S.NavLink>
-                {t("saude-estilo-de-vida:next")} <S.NextIcon />
+                <S.PrevIcon /> {t("controlo-de-peso:previous")}
+              </S.NavLink>
+            </Link>
+          </S.LinkAndIconContainer>
+          <S.LinkAndIconContainer>
+            <Link href="/rejuvenescimento-facial" passHref>
+              <S.NavLink>
+                {t("controlo-de-peso:next")} <S.NextIcon />
               </S.NavLink>
             </Link>
           </S.LinkAndIconContainer>
@@ -51,4 +57,4 @@ const SaudeEstiloDeVida = () => {
   );
 };
 
-export default SaudeEstiloDeVida;
+export default RejuvenescimentoFacial;

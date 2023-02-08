@@ -15,7 +15,7 @@ const Fitoterapia = () => {
         <title>{t("fitoterapia:headTitle")}</title>
         <meta
           name="description"
-          content="Fitoterapia -  Tratamentos de fitoterapia seguindo os princípios da Medicina Chinesa com a terapêuta Maria C. Moreira. Consultas em Lisboa"
+          content="Fitoterapia -  Tratamentos de fitoterapia seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

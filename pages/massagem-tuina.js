@@ -15,7 +15,7 @@ const MassagemTuina = () => {
         <title>{t("massagem-tuina:headTitle")}</title>
         <meta
           name="description"
-          content="Massagem Tui Na - Tratamentos com a técnica de Massagem Tui Na, seguindo os princípios da Medicina Chinesa com a terapêuta Maria C. Moreira. Consultas em Lisboa"
+          content="Massagem Tui Na - Tratamentos com a técnica de Massagem Tui Na, seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -15,7 +15,7 @@ const Ventosaterapia = () => {
         <title>{t("ventosaterapia:headTitle")}</title>
         <meta
           name="description"
-          content="Ventosaterapia - seguindo os princípios da Medicina Chinesa com a terapêuta Maria C. Moreira. Consultas em Lisboa"
+          content="Ventosaterapia - seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
