@@ -12,7 +12,7 @@ const RejuvenescimentoFacial = () => {
   return (
     <>
       <Head>
-        <title>{t("controlo-de-peso:headTitle")}</title>
+        <title>{t("rejuvenescimento-facial:headTitle")}</title>
         <meta
           name="description"
           content="Tratamentos de Saúde e Estilo de Vida seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
@@ -20,34 +20,41 @@ const RejuvenescimentoFacial = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <S.TheraSection>
-        <S.Title treatment>{t("controlo-de-peso:title")}</S.Title>
+        <S.Title treatment>{t("rejuvenescimento-facial:title")}</S.Title>
         <S.Container>
           <PagesSlider images={acupuntureAndMoxaImgs} treatment />
           <S.DescriptionContainer treatment>
-            <S.SubTitle>{t("controlo-de-peso:subTitle1")}</S.SubTitle>
             <S.Article>
-              <S.Text>{t("controlo-de-peso:textBlock1")}</S.Text>
+              <S.SubTitle>{t("rejuvenescimento-facial:subTitle1")}</S.SubTitle>
+
+              <S.Text>{t("rejuvenescimento-facial:textBlock1")}</S.Text>
             </S.Article>
             <S.Article>
-              <S.Text>{t("controlo-de-peso:textBlock2")}</S.Text>
+              <S.SubTitle>{t("rejuvenescimento-facial:subTitle2")}</S.SubTitle>
+              <S.Text>{t("rejuvenescimento-facial:textBlock2")}</S.Text>
             </S.Article>
             <S.Article>
-              <S.Text>{t("controlo-de-peso:textBlock3")}</S.Text>
+              <S.SubTitle>{t("rejuvenescimento-facial:subTitle3")}</S.SubTitle>
+              <S.Text>{t("rejuvenescimento-facial:textBlock3")}</S.Text>
+            </S.Article>
+            <S.Article>
+              <S.SubTitle>{t("rejuvenescimento-facial:subTitle4")}</S.SubTitle>
+              <S.Text>{t("rejuvenescimento-facial:textBlock4")}</S.Text>
             </S.Article>
           </S.DescriptionContainer>
         </S.Container>
         <S.NavBtnsContainer>
           <S.LinkAndIconContainer>
-            <Link href="/saude-estilo-de-vida" passHref>
+            <Link href="/controlo-de-peso" passHref>
               <S.NavLink>
-                <S.PrevIcon /> {t("controlo-de-peso:previous")}
+                <S.PrevIcon /> {t("rejuvenescimento-facial:previous")}
               </S.NavLink>
             </Link>
           </S.LinkAndIconContainer>
           <S.LinkAndIconContainer>
-            <Link href="/rejuvenescimento-facial" passHref>
+            <Link href="/dor-inflamacao" passHref>
               <S.NavLink>
-                {t("controlo-de-peso:next")} <S.NextIcon />
+                {t("rejuvenescimento-facial:next")} <S.NextIcon />
               </S.NavLink>
             </Link>
           </S.LinkAndIconContainer>

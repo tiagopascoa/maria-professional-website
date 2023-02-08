@@ -13,7 +13,11 @@
     "Acupuntura Facial"
   ],
   "aboutMe": {
-    "aboutMeTitle": "Sobre Mim"
+    "aboutMeTitle": "Sobre Mim",
+    "paragraph1": "Formada na ESMTC - Escola de Medicina Tradicional Chinesa.",
+    "paragraph2": "Em 2013, estágio de quatro meses na China, em ambiente hospitalar e em parceria com a Nanjing University of Chinese Medicine.",
+    "paragraph3": "Desde então, a exercer em Lisboa, promovendo a saúde e a longevidade através desta arte milenar.",
+    "paragraph4": "Vários cursos e ações de formação, com especializações em áreas como a acupuntura facial e a osteopatia."
   },
   "therapies": {
     "therapiesTitle": "Terapias",
