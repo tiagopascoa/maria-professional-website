@@ -24,16 +24,12 @@ const styles = {
   `,
   NameContainer: styled.h1`
     grid-column: 1 / 3;
-    /* background-color: #cc8076; */
     display: flex;
     flex-direction: column;
-
     justify-content: flex-start;
     align-items: flex-start;
-    /* grid-column: 1 / 4;
-    flex-direction: row; */
     @media (max-width: 768px) {
-      grid-column: 2 / 6;
+      grid-column: 1 / 7;
       align-items: center;
       justify-content: center;
       padding-bottom: 1.5rem;
@@ -44,8 +40,6 @@ const styles = {
     grid-row: 1 / 6;
     position: relative;
     z-index: 0;
-    /* box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
-      rgb(0 0 0 / 30%) 0px 1px 3px -1px; */
     @media (max-width: 768px) {
       grid-column: 2 / 7;
       grid-row: 2 / 6;
@@ -66,7 +60,6 @@ const styles = {
     @media (max-width: 768px) {
       grid-column: 1 / 6;
     }
-    /*  border-radius: 0.5rem; */
   `,
   LogoGridElement: styled.div`
     grid-column: 1 / 3;
@@ -79,27 +72,14 @@ const styles = {
       grid-column: 1 / 3;
       grid-row: 3 / 5;
       position: relative;
-      /* bottom: 10px;
-      right: 0px; */
     }
   `,
   LogoContainer: styled.div`
-    /* grid-column: 1 / 3;
-    grid-row: 3 / 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2; */
     position: relative;
     width: 90px;
     height: 90px;
     top: -0.5px;
     @media (max-width: 480px) {
-      /* grid-column: 1 / 3; */
-      /* grid-row: 3 / 5; */
-      /* position: relative; */
-      /* bottom: 10px;
-      right: 0px; */
       width: 75px;
       height: 75px;
       top: 0px;
@@ -107,7 +87,6 @@ const styles = {
   `,
 
   FirstName: styled.span`
-    /* font-family: LuloClean, sans-serif; */
     font-size: 3.5rem;
     color: #cc8076;
     padding-left: 0.85rem;
@@ -117,12 +96,8 @@ const styles = {
     }
   `,
   LastName: styled.span`
-    /* font-family: LuloClean, sans-serif; */
     font-size: 2.2rem;
     color: #cc8076;
-    @media (max-width: 768px) {
-      font-size: 1.7rem;
-    }
   `,
   AboutTitle: styled.h2`
     font-size: 2rem;
@@ -140,7 +115,6 @@ const styles = {
     color: #ffffff;
   `,
   StyledImage: styled(Image)`
-    /* filter: drop-shadow(0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.2)); */
   `,
 };
 

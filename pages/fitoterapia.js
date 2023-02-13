@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
 //Data
-import { fitoterapiaImgs } from "../util/pages";
+import { fitoterapiaImgs } from "../util/imagesPaths";
 //Components
 import PagesSlider from "../components/PagesSlider";
 

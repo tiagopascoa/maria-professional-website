@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
 //Data
-import { acupuntureAndMoxaImgs } from "../util/pages";
+import { wheightManagementImgs } from "../util/imagesPaths";
 //Components
 import PagesSlider from "../components/PagesSlider";
 
@@ -22,7 +22,7 @@ const ControloDePeso = () => {
       <S.TheraSection>
         <S.Title treatment>{t("controlo-de-peso:title")}</S.Title>
         <S.Container>
-          <PagesSlider images={acupuntureAndMoxaImgs} treatment />
+          <PagesSlider images={wheightManagementImgs} treatment />
           <S.DescriptionContainer treatment>
             <S.SubTitle>{t("controlo-de-peso:subTitle1")}</S.SubTitle>
             <S.Article>

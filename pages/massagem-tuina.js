@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
 //Data
-import { massagemTuinaImgs } from "../util/pages";
+import { massagemTuinaImgs } from "../util/imagesPaths";
 //Components
 import PagesSlider from "../components/PagesSlider";
 

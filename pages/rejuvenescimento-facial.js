@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
 //Data
-import { acupuntureAndMoxaImgs } from "../util/pages";
+import { facialImgs } from "../util/imagesPaths";
 //Components
 import PagesSlider from "../components/PagesSlider";
 
@@ -22,7 +22,7 @@ const RejuvenescimentoFacial = () => {
       <S.TheraSection>
         <S.Title treatment>{t("rejuvenescimento-facial:title")}</S.Title>
         <S.Container>
-          <PagesSlider images={acupuntureAndMoxaImgs} treatment />
+          <PagesSlider images={facialImgs} treatment />
           <S.DescriptionContainer treatment>
             <S.Article>
               <S.SubTitle>{t("rejuvenescimento-facial:subTitle1")}</S.SubTitle>

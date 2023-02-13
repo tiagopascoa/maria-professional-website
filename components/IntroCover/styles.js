@@ -9,7 +9,7 @@ const styles = {
     display: flex;
     flex-direction: column;
     @media screen and (max-width: 480px) {
-      min-height: calc(100vh - 7rem);
+      min-height: calc(80vh - 7rem);
     }
   `,
   StyledNextImage: styled(Image)`
@@ -27,9 +27,6 @@ const styles = {
     gap: 3rem;
     flex: 1;
     padding: 1.5rem;
-    @media screen and (max-width: 480px) {
-      gap: 4rem;
-    }
     @media screen and (max-height: 700px) {
       gap: 2rem;
     }
@@ -47,7 +44,7 @@ const styles = {
   Title: styled.h1`
     /* font-family: LuloClean, sans-serif; */
     font-size: 4rem;
-    font-weight: 900;
+    /* font-weight: 800; */
     text-align: center;
     color: ${(props) => (props.secondtitle ? "#925f5b" : "#FFFFFF")};
     @media screen and (max-width: 768px) {
@@ -63,7 +60,7 @@ const styles = {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    max-width: 75%;
+   /*  max-width: 75%; */
     @media screen and (max-width: 768px) {
       max-width: 100%;
     }
@@ -76,6 +73,8 @@ const styles = {
   SubTitle: styled.h2`
     font-size: 1.2rem;
     color: #ffffff;
+    text-align: center;
+    /* font-family: 'Caveat', cursive; */
     @media screen and (max-width: 345px) {
       font-size: 1rem;
     }

@@ -14,12 +14,16 @@ const IntroCover = ({ t }) => {
       <S.TopContainer>
         <S.TitleContainer>
           <S.Title>
-            {t("home:introCover.coverTitle1")}<br/>
+            {t("home:introCover.coverTitle1")}
+            <br />
             <S.SecondTitle>{t("home:introCover.coverTitle2")}</S.SecondTitle>
           </S.Title>
-          {/* <S.Title secondtitle>Chinesa</S.Title> */}
         </S.TitleContainer>
         <S.SubTitleContainer>
+          {/* <S.SubTitle>
+            A saúde é a base para a longevidade e a felicidade, mantenha-as
+            sempre em equilíbrio. - Lao Tse.
+          </S.SubTitle> */}
           {t("home:coverTherapies", {}, { returnObjects: true }).map(
             (therapy, index) => {
               return index === 0 ? (
