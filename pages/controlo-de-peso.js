@@ -17,7 +17,6 @@ const ControloDePeso = () => {
           name="description"
           content="Tratamentos de Saúde e Estilo de Vida seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <S.TheraSection>
         <S.Title treatment>{t("controlo-de-peso:title")}</S.Title>

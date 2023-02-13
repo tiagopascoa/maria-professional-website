@@ -17,7 +17,6 @@ const Fitoterapia = () => {
           name="description"
           content="Fitoterapia -  Tratamentos de fitoterapia seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <S.TheraSection>
         <S.Title>{t("fitoterapia:title")}</S.Title>

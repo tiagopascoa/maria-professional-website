@@ -17,7 +17,6 @@ const AcupunturaMoxa = () => {
           name="description"
           content="Acupuntura e Moxabustão -  Tratamentos de acupuntura e moxabustão seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <S.TheraSection>
         <S.Title>{t("acupuntura-moxabustao:title")}</S.Title>

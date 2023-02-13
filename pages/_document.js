@@ -31,12 +31,12 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-         {/*  <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Caveat&family=Caveat+Brush&display=swap"
-            rel="stylesheet"
-          /> */}
+          <link rel="icon" href="/favicon.ico" />
+          {/* Open Graph meta tags */}
+          <meta property="og:title" content="Maria C. Moreira - Medicina Chinesa" />
+          <meta property="og:description" content="Maria C. Moreira - Tratamentos de Medicina Chinesa em Lisboa. Acupuntura, Ventosaterapia, Moxabustão, Fitoterapia e Dietética." />
+          <meta property="og:image" content={`${process.env.PUBLIC_URL}/logo_maria_openg.png`} />
+          <meta property="og:type" content="website" />
         </Head>
         <body>
           <Main />

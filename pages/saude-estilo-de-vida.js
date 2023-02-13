@@ -18,7 +18,6 @@ const SaudeEstiloDeVida = () => {
           name="description"
           content="Tratamentos de Saúde e Estilo de Vida seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <S.TheraSection>
         <S.Title treatment={+true}>{t("saude-estilo-de-vida:title")}</S.Title>
