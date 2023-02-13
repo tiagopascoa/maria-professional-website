@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
           {/* Open Graph meta tags */}
           <meta property="og:title" content="Maria C. Moreira - Medicina Chinesa" />
           <meta property="og:description" content="Maria C. Moreira - Tratamentos de Medicina Chinesa em Lisboa. Acupuntura, Ventosaterapia, Moxabustão, Fitoterapia e Dietética." />
-          <meta property="og:image" content={`${process.env.PUBLIC_URL}/logo_maria_openg.png`} />
+          <meta property="og:image" content={`https://mariacmoreira-mtc.vercel.app/logo_maria_openg.png`} />
           <meta property="og:type" content="website" />
         </Head>
         <body>
