@@ -8,7 +8,7 @@ const styles = {
     margin-top: 5rem;
     scroll-margin-top: 7rem;
   `,
-  Title: styled.h1`
+  Title: styled.h2`
     /* font-family: LuloClean, sans-serif; */
     font-size: 3.5rem;
     color: #cc8076;

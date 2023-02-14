@@ -70,7 +70,7 @@ const styles = {
     align-items: center;
     gap: 0.5rem;
   `,
-  SubTitle: styled.h2`
+  SubTitle: styled.span`
     font-size: 1.2rem;
     color: #ffffff;
     text-align: center;

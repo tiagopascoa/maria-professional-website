@@ -22,7 +22,7 @@ const styles = {
       padding: 0 1.5rem;
     }
   `,
-  NameContainer: styled.h1`
+  NameContainer: styled.h2`
     grid-column: 1 / 3;
     display: flex;
     flex-direction: column;
@@ -99,7 +99,7 @@ const styles = {
     font-size: 2.2rem;
     color: #cc8076;
   `,
-  AboutTitle: styled.h2`
+  AboutTitle: styled.h3`
     font-size: 2rem;
     color: #ffffff;
     display: flex;

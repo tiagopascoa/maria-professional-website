@@ -49,7 +49,7 @@ const styles = {
       align-items: center;
     }
   `,
-  Title: styled.h1`
+  Title: styled.h2`
     /* font-family: LuloClean, sans-serif; */
     font-size: 3.5rem;
     color: #cc8076;

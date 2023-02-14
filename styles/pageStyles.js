@@ -17,9 +17,12 @@ const styles = {
     flex-direction: column;
     align-items: center;
     /* align-items: flex-start; */
-    gap: 2rem;
+    gap: 3rem;
     margin-top: 1rem;
     padding: 0 1.5rem;
+    @media (max-width: 480px) {
+      font-size: 2rem;
+    }
   `,
   BackAndTitleContainer: styled.div`
     display: flex;
@@ -34,7 +37,7 @@ const styles = {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: auto;
+    margin: 0 auto;
     @media (max-width: 768px) {
       font-size: 3rem;
     }
@@ -90,8 +93,8 @@ const styles = {
     gap: 0.5rem;
   `,
   List: styled.ul`
-    /* padding-top: 0.5rem; */
     color: #ffffff;
+    font-size: 1rem;
     line-height: 21px;
   `,
   NavBtnsContainer: styled.div`

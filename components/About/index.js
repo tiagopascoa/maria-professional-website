@@ -6,7 +6,7 @@ const About = ({ t }) => {
     <S.AboutContainer id="about">
       <S.AboutGrid>
         <S.NameContainer>
-          <S.FirstName>Maria</S.FirstName>
+          <S.FirstName>Maria{" "}</S.FirstName>
           <S.LastName>C. Moreira</S.LastName>
         </S.NameContainer>
         <S.ImageContainer>

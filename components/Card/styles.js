@@ -20,7 +20,7 @@ const styles = {
     /* border-radius: 0.5rem; */
   `,
 
-  Title: styled.h2`
+  Title: styled.h3`
     color: #ffffff;
     font-size: 1.2rem;
     display: flex;
