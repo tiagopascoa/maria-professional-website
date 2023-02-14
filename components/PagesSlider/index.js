@@ -10,7 +10,6 @@ const PagesSlider = ({ images, treatment }) => {
       className={
         "slick-prev slick-arrow" + (currentSlide === 0 ? " slick-disabled" : "")
       }
-      aria-hidden="true"
       aria-disabled={currentSlide === 0 ? true : false}
       treatment={treatment}
     >
@@ -24,7 +23,6 @@ const PagesSlider = ({ images, treatment }) => {
         "slick-next slick-arrow" +
         (currentSlide === slideCount - 1 ? " slick-disabled" : "")
       }
-      aria-hidden="true"
       aria-disabled={currentSlide === slideCount - 1 ? true : false}
       treatment={treatment}
     >
