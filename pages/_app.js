@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 import NavMobile from "../components/NavMobile";
 import Layout from "../components/Layout";
 import Footer from "../components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }) {
   const { t } = useTranslation();
@@ -33,6 +34,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Analytics />
       <Layout>
         <Navbar
           toggleMobileNav={toggleMobileNav}
@@ -47,6 +49,7 @@ function MyApp({ Component, pageProps }) {
           setIconOpen={setIconOpen}
           t={t}
         />
+
         <Component {...pageProps} />
       </Layout>
       <Footer t={t} />
