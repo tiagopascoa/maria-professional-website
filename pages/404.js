@@ -1,7 +1,11 @@
+import S from "../styles/pageStyles";
+import Link from "next/link";
+
 export default function Custom404() {
   return (
-    <h1 style={{ minHeight: "calc(100vh - 18rem)" }}>
-      404 - Pedimos desculpa mas não encontramos esta página.
-    </h1>
+    <S.NoPageContainer>
+      <h1>404 - Pedimos desculpa mas não encontramos esta página.</h1>
+      <Link href="/">Voltar à página principal.</Link>
+    </S.NoPageContainer>
   );
 }

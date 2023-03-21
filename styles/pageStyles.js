@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { MdOutlineNavigateBefore } from "react-icons/md";
+import Link from "next/link";
 
 const styles = {
   //Icons
   NextIcon: styled(MdOutlineNavigateNext)`
     color: ${({ treatment }) => (treatment ? "#cc8076" : "#925f5b")};
-    
   `,
   PrevIcon: styled(MdOutlineNavigateBefore)`
     color: ${({ treatment }) => (treatment ? "#cc8076" : "#925f5b")};
@@ -111,8 +111,26 @@ const styles = {
     font-size: 1.2rem;
   `,
   LinkAndIconContainer: styled.div`
-    border-bottom: ${({ treatment }) => (treatment ? "1px solid #cc8076" : "1px solid #925f5b")};;
+    border-bottom: ${({ treatment }) =>
+      treatment ? "1px solid #cc8076" : "1px solid #925f5b"};
     color: #925f5b;
+  `,
+
+  NoPageContainer: styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 7rem);
+    width: 100%;
+    padding: 1rem 1.5rem;
+  `,
+
+  BackHomeLink: styled(Link)`
+    text-decoration: underline;
+    color: #0645AD;
+    font-size: 1.2rem;
   `,
 };
 

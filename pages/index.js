@@ -17,7 +17,8 @@ export default function Home() {
         <meta
           name="description"
           content="Maria C. Moreira - Tratamentos de Medicina Chinesa em Lisboa. Acupuntura, Ventosaterapia, Moxabustão, Fitoterapia e Dietética."
-        />      
+        />
+        <link rel="canonical" href="https://www.mariacmoreiramtc.com" />
       </Head>
       <main>
         <IntroCover t={t} />
