@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { MdEmail } from "react-icons/md";
-import { MdPhone } from "react-icons/md";
-import { BsInstagram } from "react-icons/bs";
-import { MdLocationOn } from "react-icons/md";
+import styled from 'styled-components';
+import { MdEmail } from 'react-icons/md';
+import { MdPhone } from 'react-icons/md';
+import { BsInstagram } from 'react-icons/bs';
+import { MdLocationOn } from 'react-icons/md';
 
 const styles = {
   //Icons
@@ -71,7 +71,7 @@ const styles = {
       width: 100%;
     }
   `,
-  ContactsContainer: styled.div`
+  ContactsContainer: styled.ul`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,13 +88,29 @@ const styles = {
       width: 100%;
     }
   `,
-  ContactRow: styled.div`
+  ContactRow: styled.li`
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1rem;
     @media (max-width: 375px) {
       flex-direction: column;
+    }
+
+    a {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      &:hover {
+        p {
+          color: #cc8076;
+        }
+
+        svg {
+          color: #cc8076;
+        }
+      }
     }
   `,
   SubTitle: styled.h2`
@@ -107,7 +123,7 @@ const styles = {
   InfoText: styled.p`
     color: #ffffff;
     font-size: 1rem;
-    text-align: center;
+    height: fit-content;
   `,
 };
 
