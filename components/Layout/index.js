@@ -1,10 +1,10 @@
-import S from "./styles";
+import styles from "./styles.module.css";
 
 const Layout = ({ children }) => {
   return (
-    <S.Page>
-      <S.PageLimits>{children}</S.PageLimits>
-    </S.Page>
+    <div className={styles.page}>
+      <div className={styles.pageLimits}>{children}</div>
+    </div>
   );
 };
 

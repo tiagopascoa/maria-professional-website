@@ -1,36 +1,35 @@
 import React from "react";
-import S from "./styles";
+import styles from "./styles.module.css";
 import Slider from "react-slick";
 import Image from "next/image";
+import { IoIosArrowDroprightCircle, IoIosArrowDropleftCircle } from "react-icons/io";
+
+const SlickArrowLeft = ({ currentSlide, slideCount, treatment, ...props }) => (
+  <IoIosArrowDropleftCircle
+    {...props}
+    className={`slick-prev slick-arrow${
+      currentSlide === 0 ? " slick-disabled" : ""
+    } ${styles.leftArrow}${treatment ? ` ${styles.arrowTreatment}` : ""}`}
+    aria-disabled={currentSlide === 0 ? true : false}
+  >
+    Previous
+  </IoIosArrowDropleftCircle>
+);
+
+const SlickArrowRight = ({ currentSlide, slideCount, treatment, ...props }) => (
+  <IoIosArrowDroprightCircle
+    {...props}
+    className={`slick-next slick-arrow${
+      currentSlide === slideCount - 1 ? " slick-disabled" : ""
+    } ${styles.rightArrow}${treatment ? ` ${styles.arrowTreatment}` : ""}`}
+    aria-disabled={currentSlide === slideCount - 1 ? true : false}
+  >
+    Next
+  </IoIosArrowDroprightCircle>
+);
 
 const PagesSlider = ({ images, treatment }) => {
-  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-    <S.LeftArrow
-      {...props}
-      className={
-        "slick-prev slick-arrow" + (currentSlide === 0 ? " slick-disabled" : "")
-      }
-      aria-disabled={currentSlide === 0 ? true : false}
-      treatment={treatment}
-    >
-      Previous
-    </S.LeftArrow>
-  );
-  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-    <S.RightArrow
-      {...props}
-      className={
-        "slick-next slick-arrow" +
-        (currentSlide === slideCount - 1 ? " slick-disabled" : "")
-      }
-      aria-disabled={currentSlide === slideCount - 1 ? true : false}
-      treatment={treatment}
-    >
-      Next
-    </S.RightArrow>
-  );
   const settings = {
-    /* lazyLoad: true, */
     dots: true,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -38,29 +37,31 @@ const PagesSlider = ({ images, treatment }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    /* initialSlide: 0, */
-    nextArrow: <SlickArrowRight />,
-    prevArrow: <SlickArrowLeft />,
+    nextArrow: <SlickArrowRight treatment={treatment} />,
+    prevArrow: <SlickArrowLeft treatment={treatment} />,
   };
+  const sliderClassName = `${styles.swiperContainer}${
+    treatment ? ` ${styles.sliderTreatment}` : ""
+  }`;
 
   return (
-    <S.SwiperContainer treatment={treatment}>
+    <div className={sliderClassName}>
       <Slider {...settings}>
         {images.map((img) => (
           <div key={img.id}>
-            <S.ImageContainer>
+            <div className={styles.imageContainer}>
               <Image
                 src={img.path}
                 alt={img.alt}
-                layout="fill"
-                objectFit="cover"
-                /* placeholder="blur" */
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                style={{ objectFit: "cover" }}
               />
-            </S.ImageContainer>
+            </div>
           </div>
         ))}
       </Slider>
-    </S.SwiperContainer>
+    </div>
   );
 };
 

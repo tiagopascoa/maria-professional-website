@@ -1,18 +1,22 @@
 import Link from "next/link";
-import S from "./styles";
+import styles from "./styles.module.css";
 
 const Card = ({ therapiestyles, title, image, path, t }) => {
-  /* console.log('path: ', path) */
+  const cardClassName = `${styles.card}${
+    therapiestyles ? ` ${styles.cardTherapy}` : ""
+  }`;
+  const buttonClassName = `${styles.button}${
+    therapiestyles ? ` ${styles.buttonTherapy}` : ""
+  }`;
+
   return (
-    <S.Card therapiestyles={therapiestyles}>
-      <S.Title>{title}</S.Title>
-      <S.ImageContainer>{image}</S.ImageContainer>
-      <Link href={path} passHref>
-        <S.Button therapiestyles={therapiestyles}>
-          {t("common:knowMoreBtn")}
-        </S.Button>
+    <div className={cardClassName}>
+      <h3 className={styles.title}>{title}</h3>
+      <div className={styles.imageContainer}>{image}</div>
+      <Link href={path} passHref legacyBehavior>
+        <a className={buttonClassName}>{t("common:knowMoreBtn")}</a>
       </Link>
-    </S.Card>
+    </div>
   );
 };
 

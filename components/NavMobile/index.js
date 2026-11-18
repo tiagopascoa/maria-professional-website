@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
-//Styles
-import S from "./styles";
+import styles from "./styles.module.css";
 import Link from "next/link";
 
 const NavMobile = ({
@@ -17,49 +16,60 @@ const NavMobile = ({
     toggleMobileNav();
     setIconOpen(!iconIsOpen);
   };
+  const mobileNavClassName = `${styles.mobileNavContainer}${
+    mobileNavisOpen ? ` ${styles.mobileNavContainerOpen}` : ""
+  }`;
+
   return (
-    <S.MobileNavContainer isOpen={mobileNavisOpen}>
-      <S.MobileNavMenu>
-        <Link href="/#about" passHref>
-          <S.MobileNavLink onClick={handleClickIcon}>
+    <aside className={mobileNavClassName}>
+      <div className={styles.mobileNavMenu}>
+        <Link href="/#about" passHref legacyBehavior>
+          <a className={styles.mobileNavLink} onClick={handleClickIcon}>
             {t("common:navBar.aboutMe")}
-          </S.MobileNavLink>
+          </a>
         </Link>
-        <Link href="/#therapies" passHref>
-          <S.MobileNavLink onClick={handleClickIcon}>
+        <Link href="/#therapies" passHref legacyBehavior>
+          <a className={styles.mobileNavLink} onClick={handleClickIcon}>
             {t("common:navBar.therapies")}
-          </S.MobileNavLink>
+          </a>
         </Link>
-        <Link href="/#treatments" passHref>
-          <S.MobileNavLink onClick={handleClickIcon}>
+        <Link href="/#treatments" passHref legacyBehavior>
+          <a className={styles.mobileNavLink} onClick={handleClickIcon}>
             {t("common:navBar.treatments")}
-          </S.MobileNavLink>
+          </a>
         </Link>
-        <Link href="/#contacts" passHref>
-          <S.MobileNavLink onClick={handleClickIcon}>
+        <Link href="/#contacts" passHref legacyBehavior>
+          <a className={styles.mobileNavLink} onClick={handleClickIcon}>
             {t("common:navBar.contacts")}
-          </S.MobileNavLink>
+          </a>
         </Link>
         <div style={{ display: "flex", padding: 0 }}>
-          <Link href={router.asPath} locale={router.locales[0]}>
-            <S.MobileNavLink>
+          <Link href={router.asPath} locale={router.locales[0]} passHref legacyBehavior>
+            <a className={styles.mobileNavLink}>
               <Image
                 src="/pt_icon.svg"
                 alt="português"
                 width="30"
                 height="30"
+                unoptimized
               />
-            </S.MobileNavLink>
+            </a>
           </Link>
-          <S.IconDivider>|</S.IconDivider>
-          <Link href={router.asPath} locale={router.locales[1]}>
-            <S.MobileNavLink>
-              <Image src="/en_icon.svg" alt="inglês" width="30" height="30" />
-            </S.MobileNavLink>
+          <span className={styles.iconDivider}>|</span>
+          <Link href={router.asPath} locale={router.locales[1]} passHref legacyBehavior>
+            <a className={styles.mobileNavLink}>
+              <Image
+                src="/en_icon.svg"
+                alt="inglês"
+                width="30"
+                height="30"
+                unoptimized
+              />
+            </a>
           </Link>
         </div>
-      </S.MobileNavMenu>
-    </S.MobileNavContainer>
+      </div>
+    </aside>
   );
 };
 

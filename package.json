@@ -7,24 +7,25 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@react-google-maps/api": "^2.12.2",
-    "@vercel/analytics": "^0.1.11",
-    "hamburger-react": "^2.5.0",
-    "next": "12.3.0",
+    "@vercel/analytics": "^2.0.1",
+    "@vis.gl/react-google-maps": "^1.10.2",
+    "hamburger-react": "^2.5.2",
+    "next": "^16.4.5",
     "next-sitemap": "^3.1.55",
-    "next-translate": "^1.6.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next-translate": "^3.2.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "react-icons": "^4.4.0",
-    "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1",
-    "styled-components": "^5.3.5"
+    "react-slick": "^0.31.0",
+    "sharp": "^0.35.5",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "eslint": "8.23.1",
-    "eslint-config-next": "12.3.0"
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.5",
+    "next-translate-plugin": "^3.2.0"
   }
 }

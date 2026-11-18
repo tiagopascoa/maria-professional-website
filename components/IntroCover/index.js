@@ -1,47 +1,47 @@
-import S from "./styles";
+import styles from "./styles.module.css";
 import Link from "next/link";
+import Image from "next/image";
+import { GoPrimitiveDot } from "react-icons/go";
 
 const IntroCover = ({ t }) => {
   return (
-    <S.CoverContainer>
-      <S.StyledNextImage
+    <section className={styles.coverContainer}>
+      <Image
+        className={styles.coverImage}
         src="/images/accupuncture_cover.jpg"
         alt="acupuntura acupuntura medicina chinesa"
-        layout="fill"
-        objectFit="cover"
+        fill
+        sizes="100vw"
+        style={{ objectFit: "cover" }}
         priority={true}
       />
-      <S.TopContainer>
-        <S.TitleContainer>
-          <S.Title>
+      <div className={styles.topContainer}>
+        <div className={styles.titleContainer}>
+          <h1 className={styles.title}>
             {t("home:introCover.coverTitle1")}{" "}
             <br />
-            <S.SecondTitle>{t("home:introCover.coverTitle2")}</S.SecondTitle>
-          </S.Title>
-        </S.TitleContainer>
-        <S.SubTitleContainer>
-          {/* <S.SubTitle>
-            A saúde é a base para a longevidade e a felicidade, mantenha-as
-            sempre em equilíbrio. - Lao Tse.
-          </S.SubTitle> */}
+            <span className={styles.secondTitle}>{t("home:introCover.coverTitle2")}</span>
+          </h1>
+        </div>
+        <div className={styles.subTitleContainer}>
           {t("home:coverTherapies", {}, { returnObjects: true }).map(
             (therapy, index) => {
               return index === 0 ? (
-                <S.SubTitle key={index}>{therapy}</S.SubTitle>
+                <span className={styles.subTitle} key={index}>{therapy}</span>
               ) : (
-                <S.DotAndSubtitleContainer key={index}>
-                  <S.DotIcon />
-                  <S.SubTitle>{therapy}</S.SubTitle>
-                </S.DotAndSubtitleContainer>
+                <div className={styles.dotAndSubtitleContainer} key={index}>
+                  <GoPrimitiveDot className={styles.dotIcon} />
+                  <span className={styles.subTitle}>{therapy}</span>
+                </div>
               );
             }
           )}
-        </S.SubTitleContainer>
-        <Link href="#therapies" passHref>
-          <S.Button> {t("common:knowMoreBtn")}</S.Button>
+        </div>
+        <Link href="#therapies" passHref legacyBehavior>
+          <a className={styles.button}> {t("common:knowMoreBtn")}</a>
         </Link>
-      </S.TopContainer>
-    </S.CoverContainer>
+      </div>
+    </section>
   );
 };
 

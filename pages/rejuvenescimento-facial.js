@@ -1,11 +1,10 @@
-import S from "../styles/pageStyles";
+import styles from "../styles/pageStyles.module.css";
 import Head from "next/head";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
-//Data
 import { facialImgs } from "../util/imagesPaths";
-//Components
 import PagesSlider from "../components/PagesSlider";
+import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from "react-icons/md";
 
 const RejuvenescimentoFacial = () => {
   const { t } = useTranslation();
@@ -18,47 +17,48 @@ const RejuvenescimentoFacial = () => {
           content="Tratamentos de Saúde e Estilo de Vida seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
         />
       </Head>
-      <S.TheraSection>
-        <S.Title treatment>{t("rejuvenescimento-facial:title")}</S.Title>
-        <S.Container>
+      <section className={styles.theraSection}>
+        <h1 className={`${styles.title} ${styles.titleTreatment}`}>
+          {t("rejuvenescimento-facial:title")}
+        </h1>
+        <div className={styles.container}>
           <PagesSlider images={facialImgs} treatment />
-          <S.DescriptionContainer treatment>
-            <S.Article>
-              <S.SubTitle>{t("rejuvenescimento-facial:subTitle1")}</S.SubTitle>
-
-              <S.Text>{t("rejuvenescimento-facial:textBlock1")}</S.Text>
-            </S.Article>
-            <S.Article>
-              <S.SubTitle>{t("rejuvenescimento-facial:subTitle2")}</S.SubTitle>
-              <S.Text>{t("rejuvenescimento-facial:textBlock2")}</S.Text>
-            </S.Article>
-            <S.Article>
-              <S.SubTitle>{t("rejuvenescimento-facial:subTitle3")}</S.SubTitle>
-              <S.Text>{t("rejuvenescimento-facial:textBlock3")}</S.Text>
-            </S.Article>
-            <S.Article>
-              <S.SubTitle>{t("rejuvenescimento-facial:subTitle4")}</S.SubTitle>
-              <S.Text>{t("rejuvenescimento-facial:textBlock4")}</S.Text>
-            </S.Article>
-          </S.DescriptionContainer>
-        </S.Container>
-        <S.NavBtnsContainer>
-          <S.LinkAndIconContainer>
-            <Link href="/controlo-de-peso" passHref>
-              <S.NavLink>
-                <S.PrevIcon /> {t("rejuvenescimento-facial:previous")}
-              </S.NavLink>
+          <div className={`${styles.descriptionContainer} ${styles.descriptionContainerTreatment}`}>
+            <article className={styles.article}>
+              <h2 className={styles.subTitle}>{t("rejuvenescimento-facial:subTitle1")}</h2>
+              <p className={styles.text}>{t("rejuvenescimento-facial:textBlock1")}</p>
+            </article>
+            <article className={styles.article}>
+              <h2 className={styles.subTitle}>{t("rejuvenescimento-facial:subTitle2")}</h2>
+              <p className={styles.text}>{t("rejuvenescimento-facial:textBlock2")}</p>
+            </article>
+            <article className={styles.article}>
+              <h2 className={styles.subTitle}>{t("rejuvenescimento-facial:subTitle3")}</h2>
+              <p className={styles.text}>{t("rejuvenescimento-facial:textBlock3")}</p>
+            </article>
+            <article className={styles.article}>
+              <h2 className={styles.subTitle}>{t("rejuvenescimento-facial:subTitle4")}</h2>
+              <p className={styles.text}>{t("rejuvenescimento-facial:textBlock4")}</p>
+            </article>
+          </div>
+        </div>
+        <div className={styles.navBtnsContainer}>
+          <div className={styles.linkAndIconContainer}>
+            <Link href="/controlo-de-peso" passHref legacyBehavior>
+              <a className={styles.navLink}>
+                <MdOutlineNavigateBefore className={styles.prevIcon} /> {t("rejuvenescimento-facial:previous")}
+              </a>
             </Link>
-          </S.LinkAndIconContainer>
-          <S.LinkAndIconContainer>
-            <Link href="/dor-inflamacao" passHref>
-              <S.NavLink>
-                {t("rejuvenescimento-facial:next")} <S.NextIcon />
-              </S.NavLink>
+          </div>
+          <div className={styles.linkAndIconContainer}>
+            <Link href="/dor-inflamacao" passHref legacyBehavior>
+              <a className={styles.navLink}>
+                {t("rejuvenescimento-facial:next")} <MdOutlineNavigateNext className={styles.nextIcon} />
+              </a>
             </Link>
-          </S.LinkAndIconContainer>
-        </S.NavBtnsContainer>
-      </S.TheraSection>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

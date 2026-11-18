@@ -1,11 +1,10 @@
-import S from "../styles/pageStyles";
+import styles from "../styles/pageStyles.module.css";
 import Head from "next/head";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
-//Data
 import { dieteticaImgs } from "../util/imagesPaths";
-//Components
 import PagesSlider from "../components/PagesSlider";
+import { MdOutlineNavigateBefore } from "react-icons/md";
 
 const Dietetica = () => {
   const { t } = useTranslation();
@@ -18,33 +17,33 @@ const Dietetica = () => {
           content="Dietética - Tratamentos de dietética seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
         />
       </Head>
-      <S.TheraSection>
-        <S.Title>{t("dietetica:title")}</S.Title>
-        <S.Container>
+      <section className={styles.theraSection}>
+        <h1 className={styles.title}>{t("dietetica:title")}</h1>
+        <div className={styles.container}>
           <PagesSlider images={dieteticaImgs} />
-          <S.DescriptionContainer>
-            <S.Article>
-              <S.SubTitle>{t("dietetica:subTitle1")}</S.SubTitle>
-              <S.Text>{t("dietetica:textBlock1")}</S.Text>
-            </S.Article>
-            <S.Article>
-              <S.Text>{t("dietetica:textBlock2")}</S.Text>
-            </S.Article>
-            <S.Article>
-              <S.Text>{t("dietetica:textBlock3")}</S.Text>
-            </S.Article>
-          </S.DescriptionContainer>
-        </S.Container>
-        <S.NavBtnsContainer>
-          <S.LinkAndIconContainer>
-            <Link href="/fitoterapia" passHref>
-              <S.NavLink>
-                <S.PrevIcon /> {t("dietetica:previous")}
-              </S.NavLink>
+          <div className={styles.descriptionContainer}>
+            <article className={styles.article}>
+              <h2 className={styles.subTitle}>{t("dietetica:subTitle1")}</h2>
+              <p className={styles.text}>{t("dietetica:textBlock1")}</p>
+            </article>
+            <article className={styles.article}>
+              <p className={styles.text}>{t("dietetica:textBlock2")}</p>
+            </article>
+            <article className={styles.article}>
+              <p className={styles.text}>{t("dietetica:textBlock3")}</p>
+            </article>
+          </div>
+        </div>
+        <div className={styles.navBtnsContainer}>
+          <div className={styles.linkAndIconContainer}>
+            <Link href="/fitoterapia" passHref legacyBehavior>
+              <a className={styles.navLink}>
+                <MdOutlineNavigateBefore className={styles.prevIcon} /> {t("dietetica:previous")}
+              </a>
             </Link>
-          </S.LinkAndIconContainer>
-        </S.NavBtnsContainer>
-      </S.TheraSection>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

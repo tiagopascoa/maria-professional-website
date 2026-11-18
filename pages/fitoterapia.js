@@ -1,11 +1,10 @@
-import S from "../styles/pageStyles";
+import styles from "../styles/pageStyles.module.css";
 import Head from "next/head";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
-//Data
 import { fitoterapiaImgs } from "../util/imagesPaths";
-//Components
 import PagesSlider from "../components/PagesSlider";
+import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from "react-icons/md";
 
 const Fitoterapia = () => {
   const { t } = useTranslation();
@@ -18,44 +17,44 @@ const Fitoterapia = () => {
           content="Fitoterapia -  Tratamentos de fitoterapia seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
         />
       </Head>
-      <S.TheraSection>
-        <S.Title>{t("fitoterapia:title")}</S.Title>
-        <S.Container>
+      <section className={styles.theraSection}>
+        <h1 className={styles.title}>{t("fitoterapia:title")}</h1>
+        <div className={styles.container}>
           <PagesSlider images={fitoterapiaImgs} />
-          <S.DescriptionContainer>
-            <S.Article>
-              <S.SubTitle>{t("fitoterapia:subTitle1")}</S.SubTitle>
-              <S.Text>{t("fitoterapia:textBlock1")}</S.Text>
-            </S.Article>
-            <S.Article>
-              <S.SubTitle2>{t("fitoterapia:subTitle2")}</S.SubTitle2>
-              <S.List>
+          <div className={styles.descriptionContainer}>
+            <article className={styles.article}>
+              <h2 className={styles.subTitle}>{t("fitoterapia:subTitle1")}</h2>
+              <p className={styles.text}>{t("fitoterapia:textBlock1")}</p>
+            </article>
+            <article className={styles.article}>
+              <h3 className={styles.subTitle2}>{t("fitoterapia:subTitle2")}</h3>
+              <ul className={styles.list}>
                 {t("fitoterapia:listItems1", {}, { returnObjects: true }).map(
                   (item, index) => {
                     return <li key={index}>{item}</li>;
                   }
                 )}
-              </S.List>
-            </S.Article>
-          </S.DescriptionContainer>
-        </S.Container>
-        <S.NavBtnsContainer>
-          <S.LinkAndIconContainer>
-            <Link href="/massagem-tuina" passHref>
-              <S.NavLink>
-                <S.PrevIcon /> {t("fitoterapia:previous")}
-              </S.NavLink>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <div className={styles.navBtnsContainer}>
+          <div className={styles.linkAndIconContainer}>
+            <Link href="/massagem-tuina" passHref legacyBehavior>
+              <a className={styles.navLink}>
+                <MdOutlineNavigateBefore className={styles.prevIcon} /> {t("fitoterapia:previous")}
+              </a>
             </Link>
-          </S.LinkAndIconContainer>
-          <S.LinkAndIconContainer>
-            <Link href="/dietetica" passHref>
-              <S.NavLink>
-                {t("fitoterapia:next")} <S.NextIcon />
-              </S.NavLink>
+          </div>
+          <div className={styles.linkAndIconContainer}>
+            <Link href="/dietetica" passHref legacyBehavior>
+              <a className={styles.navLink}>
+                {t("fitoterapia:next")} <MdOutlineNavigateNext className={styles.nextIcon} />
+              </a>
             </Link>
-          </S.LinkAndIconContainer>
-        </S.NavBtnsContainer>
-      </S.TheraSection>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

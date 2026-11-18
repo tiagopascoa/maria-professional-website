@@ -1,11 +1,10 @@
-import S from "../styles/pageStyles";
+import styles from "../styles/pageStyles.module.css";
 import Head from "next/head";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
-//Data
 import { ventosaterapiaImgs } from "../util/imagesPaths";
-//Components
 import PagesSlider from "../components/PagesSlider";
+import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from "react-icons/md";
 
 const Ventosaterapia = () => {
   const { t } = useTranslation();
@@ -18,18 +17,18 @@ const Ventosaterapia = () => {
           content="Ventosaterapia - seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
         />
       </Head>
-      <S.TheraSection>
-        <S.Title>{t("ventosaterapia:title")}</S.Title>
-        <S.Container>
+      <section className={styles.theraSection}>
+        <h1 className={styles.title}>{t("ventosaterapia:title")}</h1>
+        <div className={styles.container}>
           <PagesSlider images={ventosaterapiaImgs} />
-          <S.DescriptionContainer>
-            <S.Article>
-              <S.SubTitle>{t("ventosaterapia:subTitle1")}</S.SubTitle>
-              <S.Text>{t("ventosaterapia:textBlock1")}</S.Text>
-            </S.Article>
-            <S.Article>
-              <S.SubTitle2>{t("ventosaterapia:subTitle2")}</S.SubTitle2>
-              <S.List>
+          <div className={styles.descriptionContainer}>
+            <article className={styles.article}>
+              <h2 className={styles.subTitle}>{t("ventosaterapia:subTitle1")}</h2>
+              <p className={styles.text}>{t("ventosaterapia:textBlock1")}</p>
+            </article>
+            <article className={styles.article}>
+              <h3 className={styles.subTitle2}>{t("ventosaterapia:subTitle2")}</h3>
+              <ul className={styles.list}>
                 {t(
                   "ventosaterapia:listItems1",
                   {},
@@ -37,11 +36,11 @@ const Ventosaterapia = () => {
                 ).map((item, index) => {
                   return <li key={index}>{item}</li>;
                 })}
-              </S.List>
-            </S.Article>
-            <S.Article>
-              <S.SubTitle2>{t("ventosaterapia:subTitle3")}</S.SubTitle2>
-              <S.List>
+              </ul>
+            </article>
+            <article className={styles.article}>
+              <h3 className={styles.subTitle2}>{t("ventosaterapia:subTitle3")}</h3>
+              <ul className={styles.list}>
                 {t(
                   "ventosaterapia:listItems2",
                   {},
@@ -49,27 +48,27 @@ const Ventosaterapia = () => {
                 ).map((item, index) => {
                   return <li key={index}>{item}</li>;
                 })}
-              </S.List>
-            </S.Article>
-          </S.DescriptionContainer>
-        </S.Container>
-        <S.NavBtnsContainer>
-          <S.LinkAndIconContainer>
-            <Link href="/acupuntura-moxabustao" passHref>
-              <S.NavLink>
-                <S.PrevIcon /> {t("ventosaterapia:previous")}
-              </S.NavLink>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <div className={styles.navBtnsContainer}>
+          <div className={styles.linkAndIconContainer}>
+            <Link href="/acupuntura-moxabustao" passHref legacyBehavior>
+              <a className={styles.navLink}>
+                <MdOutlineNavigateBefore className={styles.prevIcon} /> {t("ventosaterapia:previous")}
+              </a>
             </Link>
-          </S.LinkAndIconContainer>
-          <S.LinkAndIconContainer>
-            <Link href="/massagem-tuina" passHref>
-              <S.NavLink>
-                {t("ventosaterapia:next")} <S.NextIcon />
-              </S.NavLink>
+          </div>
+          <div className={styles.linkAndIconContainer}>
+            <Link href="/massagem-tuina" passHref legacyBehavior>
+              <a className={styles.navLink}>
+                {t("ventosaterapia:next")} <MdOutlineNavigateNext className={styles.nextIcon} />
+              </a>
             </Link>
-          </S.LinkAndIconContainer>
-        </S.NavBtnsContainer>
-      </S.TheraSection>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
