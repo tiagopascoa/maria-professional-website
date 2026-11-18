@@ -1,11 +1,10 @@
-import S from "../styles/pageStyles";
+import styles from "../styles/pageStyles.module.css";
 import Head from "next/head";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
-//Data
 import { wheightManagementImgs } from "../util/imagesPaths";
-//Components
 import PagesSlider from "../components/PagesSlider";
+import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from "react-icons/md";
 
 const ControloDePeso = () => {
   const { t } = useTranslation();
@@ -18,40 +17,42 @@ const ControloDePeso = () => {
           content="Tratamentos de Saúde e Estilo de Vida seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
         />
       </Head>
-      <S.TheraSection>
-        <S.Title treatment>{t("controlo-de-peso:title")}</S.Title>
-        <S.Container>
+      <section className={styles.theraSection}>
+        <h1 className={`${styles.title} ${styles.titleTreatment}`}>
+          {t("controlo-de-peso:title")}
+        </h1>
+        <div className={styles.container}>
           <PagesSlider images={wheightManagementImgs} treatment />
-          <S.DescriptionContainer treatment>
-            <S.SubTitle>{t("controlo-de-peso:subTitle1")}</S.SubTitle>
-            <S.Article>
-              <S.Text>{t("controlo-de-peso:textBlock1")}</S.Text>
-            </S.Article>
-            <S.Article>
-              <S.Text>{t("controlo-de-peso:textBlock2")}</S.Text>
-            </S.Article>
-            <S.Article>
-              <S.Text>{t("controlo-de-peso:textBlock3")}</S.Text>
-            </S.Article>
-          </S.DescriptionContainer>
-        </S.Container>
-        <S.NavBtnsContainer>
-          <S.LinkAndIconContainer>
+          <div className={`${styles.descriptionContainer} ${styles.descriptionContainerTreatment}`}>
+            <h2 className={styles.subTitle}>{t("controlo-de-peso:subTitle1")}</h2>
+            <article className={styles.article}>
+              <p className={styles.text}>{t("controlo-de-peso:textBlock1")}</p>
+            </article>
+            <article className={styles.article}>
+              <p className={styles.text}>{t("controlo-de-peso:textBlock2")}</p>
+            </article>
+            <article className={styles.article}>
+              <p className={styles.text}>{t("controlo-de-peso:textBlock3")}</p>
+            </article>
+          </div>
+        </div>
+        <div className={styles.navBtnsContainer}>
+          <div className={styles.linkAndIconContainer}>
             <Link href="/saude-estilo-de-vida" passHref legacyBehavior>
-              <S.NavLink>
-                <S.PrevIcon /> {t("controlo-de-peso:previous")}
-              </S.NavLink>
+              <a className={styles.navLink}>
+                <MdOutlineNavigateBefore className={styles.prevIcon} /> {t("controlo-de-peso:previous")}
+              </a>
             </Link>
-          </S.LinkAndIconContainer>
-          <S.LinkAndIconContainer>
+          </div>
+          <div className={styles.linkAndIconContainer}>
             <Link href="/rejuvenescimento-facial" passHref legacyBehavior>
-              <S.NavLink>
-                {t("controlo-de-peso:next")} <S.NextIcon />
-              </S.NavLink>
+              <a className={styles.navLink}>
+                {t("controlo-de-peso:next")} <MdOutlineNavigateNext className={styles.nextIcon} />
+              </a>
             </Link>
-          </S.LinkAndIconContainer>
-        </S.NavBtnsContainer>
-      </S.TheraSection>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

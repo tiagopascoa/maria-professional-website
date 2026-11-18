@@ -1,5 +1,5 @@
 import React from "react";
-import S from "./styles";
+import styles from "./styles.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import Hamburger from "hamburger-react";
@@ -9,10 +9,10 @@ const Navbar = ({ toggleMobileNav, iconIsOpen, setIconOpen, t }) => {
   const router = useRouter();
 
   return (
-    <S.Navbar>
+    <nav className={styles.navbar}>
       <Link href="/">
-        <S.BrandContainer>
-          <S.LogoContainer>
+        <div className={styles.brandContainer}>
+          <div className={styles.logoContainer}>
             <Image
               src="/logo_maria.png"
               alt="Maria C. Moreira"
@@ -20,42 +20,42 @@ const Navbar = ({ toggleMobileNav, iconIsOpen, setIconOpen, t }) => {
               sizes="5rem"
               style={{ objectFit: "contain" }}
             />
-          </S.LogoContainer>
-          <S.NameContainer>
-            <S.FirstName>Maria</S.FirstName>
-            <S.LastName>C. Moreira</S.LastName>
-          </S.NameContainer>
-        </S.BrandContainer>
+          </div>
+          <div className={styles.nameContainer}>
+            <span className={styles.firstName}>Maria</span>
+            <span className={styles.lastName}>C. Moreira</span>
+          </div>
+        </div>
       </Link>
-      <S.MobileIcon onClick={toggleMobileNav}>
+      <div className={styles.mobileIcon} onClick={toggleMobileNav}>
         <Hamburger toggled={iconIsOpen} toggle={setIconOpen} color="#925f5b" />
-      </S.MobileIcon>
-      <S.Menu>
-        <S.MenuItems>
+      </div>
+      <ul className={styles.menu}>
+        <li className={styles.menuItems}>
           <Link href="/#about" passHref legacyBehavior>
-            <S.MenuLink>{t("common:navBar.aboutMe")}</S.MenuLink>
+            <a className={styles.menuLink}>{t("common:navBar.aboutMe")}</a>
           </Link>
-        </S.MenuItems>
-        <S.MenuItems>
+        </li>
+        <li className={styles.menuItems}>
           <Link href="/#therapies" passHref legacyBehavior>
-            <S.MenuLink>{t("common:navBar.therapies")}</S.MenuLink>
+            <a className={styles.menuLink}>{t("common:navBar.therapies")}</a>
           </Link>
-        </S.MenuItems>
-        <S.MenuItems>
+        </li>
+        <li className={styles.menuItems}>
           <Link href="/#treatments" passHref legacyBehavior>
-            <S.MenuLink>{t("common:navBar.treatments")}</S.MenuLink>
+            <a className={styles.menuLink}>{t("common:navBar.treatments")}</a>
           </Link>
-        </S.MenuItems>
-        <S.MenuItems>
+        </li>
+        <li className={styles.menuItems}>
           <Link href="/#contacts" passHref legacyBehavior>
-            <S.MenuLink>{t("common:navBar.contacts")}</S.MenuLink>
+            <a className={styles.menuLink}>{t("common:navBar.contacts")}</a>
           </Link>
-        </S.MenuItems>
-        <S.MenuItems>
+        </li>
+        <li className={styles.menuItems}>
           <ul style={{ display: "flex", padding: 0 }}>
-            <S.MenuItems>
+            <li className={styles.menuItems}>
               <Link href={router.asPath} locale={router.locales[0]} passHref legacyBehavior>
-                <S.MenuLink>
+                <a className={styles.menuLink}>
                   <Image
                     src="/pt_icon.svg"
                     alt="português"
@@ -63,13 +63,13 @@ const Navbar = ({ toggleMobileNav, iconIsOpen, setIconOpen, t }) => {
                     height="22"
                     unoptimized
                   />
-                </S.MenuLink>
+                </a>
               </Link>
-            </S.MenuItems>
-            <S.IconDivider>|</S.IconDivider>
-            <S.MenuItems>
+            </li>
+            <span className={styles.iconDivider}>|</span>
+            <li className={styles.menuItems}>
               <Link href={router.asPath} locale={router.locales[1]} passHref legacyBehavior>
-                <S.MenuLink>
+                <a className={styles.menuLink}>
                   <Image
                     src="/en_icon.svg"
                     alt="inglês"
@@ -77,13 +77,13 @@ const Navbar = ({ toggleMobileNav, iconIsOpen, setIconOpen, t }) => {
                     height="22"
                     unoptimized
                   />
-                </S.MenuLink>
+                </a>
               </Link>
-            </S.MenuItems>
+            </li>
           </ul>
-        </S.MenuItems>
-      </S.Menu>
-    </S.Navbar>
+        </li>
+      </ul>
+    </nav>
   );
 };
 

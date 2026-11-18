@@ -1,57 +1,58 @@
-import S from './styles';
-//Components
-import Map from '../Map';
+import styles from "./styles.module.css";
+import Map from "../Map";
+import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
+import { BsInstagram } from "react-icons/bs";
 
 const ContactAndBooking = ({ t }) => {
   return (
-    <S.ContactsSection id="contacts">
-      <S.Title>{t('home:contact.contactTitle')}</S.Title>
-      <S.MapAndContacts>
-        <S.MapContainer>
+    <section className={styles.contactsSection} id="contacts">
+      <h2 className={styles.title}>{t("home:contact.contactTitle")}</h2>
+      <div className={styles.mapAndContacts}>
+        <div className={styles.mapContainer}>
           <Map />
-        </S.MapContainer>
-        <S.ContactsColumn>
-          <S.ContactsContainer>
-            <S.ContactRow>
+        </div>
+        <div className={styles.contactsColumn}>
+          <ul className={styles.contactsContainer}>
+            <li className={styles.contactRow}>
               <a
                 href="https://wa.me/351917174650"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <S.LocationIcon />
-                <S.InfoText>Lisboa | Almada</S.InfoText>
+                <MdLocationOn className={styles.contactIcon} />
+                <p className={styles.infoText}>Lisboa | Almada</p>
               </a>
-            </S.ContactRow>
-            <S.ContactRow>
+            </li>
+            <li className={styles.contactRow}>
               <a href="mailto:mariacmoreira.mtc@gmail.com">
-                <S.EmailIcon />
-                <S.InfoText>mariacmoreira.mtc@gmail.com</S.InfoText>
+                <MdEmail className={styles.contactIcon} />
+                <p className={styles.infoText}>mariacmoreira.mtc@gmail.com</p>
               </a>
-            </S.ContactRow>
-            <S.ContactRow>
+            </li>
+            <li className={styles.contactRow}>
               <a
                 href="https://wa.me/351917174650"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <S.PhoneIcon />
-                <S.InfoText>+351 917 174 650</S.InfoText>
+                <MdPhone className={styles.contactIcon} />
+                <p className={styles.infoText}>+351 917 174 650</p>
               </a>
-            </S.ContactRow>
-            <S.ContactRow>
+            </li>
+            <li className={styles.contactRow}>
               <a
                 href="https://www.instagram.com/mariacmoreira.mtc/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <S.InstagramIcon />
-                <S.InfoText>@mariacmoreira.mtc</S.InfoText>
+                <BsInstagram className={styles.contactIcon} />
+                <p className={styles.infoText}>@mariacmoreira.mtc</p>
               </a>
-            </S.ContactRow>
-          </S.ContactsContainer>
-        </S.ContactsColumn>
-      </S.MapAndContacts>
-    </S.ContactsSection>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   );
 };
 

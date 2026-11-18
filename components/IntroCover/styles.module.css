@@ -1,0 +1,113 @@
+.coverContainer {
+  min-height: calc(80vh - 7rem);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.coverImage {
+  z-index: 0;
+}
+
+.topContainer {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+  z-index: 1;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.titleContainer {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 4rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.secondTitle {
+  color: #925f5b;
+}
+
+.subTitleContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dotAndSubtitleContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subTitle {
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.dotIcon {
+  color: #ffffff;
+}
+
+.button {
+  cursor: pointer;
+  background-color: #925f5b;
+  color: #ffffff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  border: none;
+}
+
+.button:hover {
+  background-color: #cc8076;
+}
+
+@media screen and (max-height: 700px) {
+  .topContainer {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .titleContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .subTitleContainer {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .coverContainer {
+    min-height: calc(80vh - 7rem);
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .subTitle {
+    font-size: 1rem;
+  }
+}

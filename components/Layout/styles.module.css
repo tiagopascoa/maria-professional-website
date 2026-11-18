@@ -1,0 +1,10 @@
+.page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pageLimits {
+  width: 100%;
+  max-width: 1200px;
+}

@@ -1,0 +1,48 @@
+.treatmentsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 5rem;
+  scroll-margin-top: 7rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  color: #cc8076;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiperContainer {
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.swiperContainer :global(.slick-slide > div) {
+  margin: 0.5rem 0.5rem;
+}
+
+.swiperContainer :global(.slick-list) {
+  margin: 0 -10px;
+}
+
+.swiperContainer :global(.slick-dots) {
+  bottom: -35px;
+}
+
+.swiperContainer :global(.slick-dots li button:before) {
+  font-size: 10px;
+  color: #925f5b;
+}
+
+.swiperContainer :global(.slick-dots li.slick-active button:before) {
+  opacity: 1;
+  color: #925f5b;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+}

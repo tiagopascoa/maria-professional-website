@@ -1,0 +1,44 @@
+.mobileNavContainer {
+  position: fixed;
+  z-index: 49;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  background: #ffffff;
+  opacity: 0;
+  top: -100%;
+}
+
+.mobileNavContainerOpen {
+  opacity: 100%;
+  top: 0;
+}
+
+.mobileNavMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.mobileNavLink {
+  color: #925f5b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.iconDivider {
+  padding: 0 0.3rem;
+  color: #925f5b;
+  font-size: 23px;
+}

@@ -1,8 +1,6 @@
-import S from "./styles";
+import styles from "./styles.module.css";
 import Image from "next/image";
-//Swiper
 import Slider from "react-slick";
-//Components
 import Card from "../Card";
 
 const Treatments = ({ t }) => {
@@ -42,9 +40,9 @@ const Treatments = ({ t }) => {
     ],
   };
   return (
-    <S.TreatmentsContainer id="treatments">
-      <S.Title>{t("home:treatments.treatmentsTitle")}</S.Title>
-      <S.SwiperContainer>
+    <section className={styles.treatmentsContainer} id="treatments">
+      <h2 className={styles.title}>{t("home:treatments.treatmentsTitle")}</h2>
+      <div className={styles.swiperContainer}>
         <Slider {...settings}>
           {t(
             "home:treatments.treatmentsCardsInfo",
@@ -70,8 +68,8 @@ const Treatments = ({ t }) => {
             );
           })}
         </Slider>
-      </S.SwiperContainer>
-    </S.TreatmentsContainer>
+      </div>
+    </section>
   );
 };
 

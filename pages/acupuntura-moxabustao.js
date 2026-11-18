@@ -1,11 +1,10 @@
-import S from "../styles/pageStyles";
+import styles from "../styles/pageStyles.module.css";
 import Head from "next/head";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
-//Data
 import { acupuntureAndMoxaImgs } from "../util/imagesPaths";
-//Components
 import PagesSlider from "../components/PagesSlider";
+import { MdOutlineNavigateNext } from "react-icons/md";
 
 const AcupunturaMoxa = () => {
   const { t } = useTranslation();
@@ -18,23 +17,23 @@ const AcupunturaMoxa = () => {
           content="Acupuntura e Moxabustão -  Tratamentos de acupuntura e moxabustão seguindo os princípios da Medicina Chinesa com a terapeuta Maria C. Moreira. Consultas em Lisboa"
         />
       </Head>
-      <S.TheraSection>
-        <S.Title>{t("acupuntura-moxabustao:title")}</S.Title>
-        <S.Container>
+      <section className={styles.theraSection}>
+        <h1 className={styles.title}>{t("acupuntura-moxabustao:title")}</h1>
+        <div className={styles.container}>
           <PagesSlider images={acupuntureAndMoxaImgs} />
-          <S.DescriptionContainer>
-            <S.Article>
-              <S.SubTitle>{t("acupuntura-moxabustao:subTitle1")}</S.SubTitle>
-              <S.Text>{t("acupuntura-moxabustao:textBlock1")}</S.Text>
-            </S.Article>
-            <S.Article>
-              <S.SubTitle>{t("acupuntura-moxabustao:subTitle2")}</S.SubTitle>
-              <S.Text>{t("acupuntura-moxabustao:textBlock2")}</S.Text>
-            </S.Article>
-            <S.Article>
-              <S.SubTitle2>{t("acupuntura-moxabustao:subTitle3")}</S.SubTitle2>
-              <S.Text>{t("acupuntura-moxabustao:textBlock3")}</S.Text>
-              <S.List>
+          <div className={styles.descriptionContainer}>
+            <article className={styles.article}>
+              <h2 className={styles.subTitle}>{t("acupuntura-moxabustao:subTitle1")}</h2>
+              <p className={styles.text}>{t("acupuntura-moxabustao:textBlock1")}</p>
+            </article>
+            <article className={styles.article}>
+              <h2 className={styles.subTitle}>{t("acupuntura-moxabustao:subTitle2")}</h2>
+              <p className={styles.text}>{t("acupuntura-moxabustao:textBlock2")}</p>
+            </article>
+            <article className={styles.article}>
+              <h3 className={styles.subTitle2}>{t("acupuntura-moxabustao:subTitle3")}</h3>
+              <p className={styles.text}>{t("acupuntura-moxabustao:textBlock3")}</p>
+              <ul className={styles.list}>
                 {t(
                   "acupuntura-moxabustao:listItems",
                   {},
@@ -42,20 +41,20 @@ const AcupunturaMoxa = () => {
                 ).map((item, index) => {
                   return <li key={index}>{item}</li>;
                 })}
-              </S.List>
-            </S.Article>
-          </S.DescriptionContainer>
-        </S.Container>
-        <S.NavBtnsContainer>
-          <S.LinkAndIconContainer style={{ marginLeft: "auto" }}>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <div className={styles.navBtnsContainer}>
+          <div className={styles.linkAndIconContainer} style={{ marginLeft: "auto" }}>
             <Link href="/ventosaterapia" passHref legacyBehavior>
-              <S.NavLink>
-                {t("acupuntura-moxabustao:next")} <S.NextIcon />
-              </S.NavLink>
+              <a className={styles.navLink}>
+                {t("acupuntura-moxabustao:next")} <MdOutlineNavigateNext className={styles.nextIcon} />
+              </a>
             </Link>
-          </S.LinkAndIconContainer>
-        </S.NavBtnsContainer>
-      </S.TheraSection>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

@@ -21,8 +21,7 @@
     "react-icons": "^4.4.0",
     "react-slick": "^0.31.0",
     "sharp": "^0.35.5",
-    "slick-carousel": "^1.8.1",
-    "styled-components": "^6.6.0"
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "eslint": "^9.39.5",
