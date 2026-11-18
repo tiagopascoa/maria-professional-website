@@ -7,7 +7,7 @@ const Card = ({ therapiestyles, title, image, path, t }) => {
     <S.Card therapiestyles={therapiestyles}>
       <S.Title>{title}</S.Title>
       <S.ImageContainer>{image}</S.ImageContainer>
-      <Link href={path} passHref>
+      <Link href={path} passHref legacyBehavior>
         <S.Button therapiestyles={therapiestyles}>
           {t("common:knowMoreBtn")}
         </S.Button>

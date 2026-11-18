@@ -60,8 +60,9 @@ const Treatments = ({ t }) => {
                   <Image
                     src={card.image}
                     alt={card.alt}
-                    layout="fill"
-                    objectFit="contain"
+                    fill
+                    sizes="12rem"
+                    style={{ objectFit: "contain" }}
                   />
                 }
                 t={t}

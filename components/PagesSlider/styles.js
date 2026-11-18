@@ -10,7 +10,7 @@ const styles = {
     color: ${({ treatment }) => (treatment ? "#cc8076" : "#925f5b")};
     position: absolute;
     right: -35px;
-    :hover {
+    &:hover {
       color: #cc8076;
     }
   `,
@@ -20,7 +20,7 @@ const styles = {
     color: ${({ treatment }) => (treatment ? "#cc8076" : "#925f5b")};
     position: absolute;
     left: -35px;
-    :hover {
+    &:hover {
       color: #cc8076;
     }
   `,

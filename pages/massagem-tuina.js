@@ -43,14 +43,14 @@ const MassagemTuina = () => {
         </S.Container>
         <S.NavBtnsContainer>
           <S.LinkAndIconContainer>
-            <Link href="/ventosaterapia" passHref>
+            <Link href="/ventosaterapia" passHref legacyBehavior>
               <S.NavLink>
                 <S.PrevIcon /> {t("massagem-tuina:previous")}
               </S.NavLink>
             </Link>
           </S.LinkAndIconContainer>
           <S.LinkAndIconContainer>
-            <Link href="/fitoterapia" passHref>
+            <Link href="/fitoterapia" passHref legacyBehavior>
               <S.NavLink>
                 {t("massagem-tuina:next")} <S.NextIcon />
               </S.NavLink>

@@ -22,9 +22,10 @@ const styles = {
     cursor: pointer;
   `,
   LogoContainer: styled.div`
-    height: 100%;
     position: relative;
     width: 5rem;
+    height: 5rem;
+    flex-shrink: 0;
   `,
   NameContainer: styled.div`
     display: flex;
@@ -56,7 +57,7 @@ const styles = {
     font-size: 1.2rem;
     color: #925f5b;
     cursor: pointer;
-    :hover {
+    &:hover {
       color: #cc8076;
     }
   `,

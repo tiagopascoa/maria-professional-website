@@ -3,32 +3,34 @@ import S from "./styles";
 import Slider from "react-slick";
 import Image from "next/image";
 
+const SlickArrowLeft = ({ currentSlide, slideCount, treatment, ...props }) => (
+  <S.LeftArrow
+    {...props}
+    className={
+      "slick-prev slick-arrow" + (currentSlide === 0 ? " slick-disabled" : "")
+    }
+    aria-disabled={currentSlide === 0 ? true : false}
+    treatment={treatment}
+  >
+    Previous
+  </S.LeftArrow>
+);
+
+const SlickArrowRight = ({ currentSlide, slideCount, treatment, ...props }) => (
+  <S.RightArrow
+    {...props}
+    className={
+      "slick-next slick-arrow" +
+      (currentSlide === slideCount - 1 ? " slick-disabled" : "")
+    }
+    aria-disabled={currentSlide === slideCount - 1 ? true : false}
+    treatment={treatment}
+  >
+    Next
+  </S.RightArrow>
+);
+
 const PagesSlider = ({ images, treatment }) => {
-  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-    <S.LeftArrow
-      {...props}
-      className={
-        "slick-prev slick-arrow" + (currentSlide === 0 ? " slick-disabled" : "")
-      }
-      aria-disabled={currentSlide === 0 ? true : false}
-      treatment={treatment}
-    >
-      Previous
-    </S.LeftArrow>
-  );
-  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-    <S.RightArrow
-      {...props}
-      className={
-        "slick-next slick-arrow" +
-        (currentSlide === slideCount - 1 ? " slick-disabled" : "")
-      }
-      aria-disabled={currentSlide === slideCount - 1 ? true : false}
-      treatment={treatment}
-    >
-      Next
-    </S.RightArrow>
-  );
   const settings = {
     /* lazyLoad: true, */
     dots: true,
@@ -39,8 +41,8 @@ const PagesSlider = ({ images, treatment }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     /* initialSlide: 0, */
-    nextArrow: <SlickArrowRight />,
-    prevArrow: <SlickArrowLeft />,
+    nextArrow: <SlickArrowRight treatment={treatment} />,
+    prevArrow: <SlickArrowLeft treatment={treatment} />,
   };
 
   return (
@@ -52,8 +54,9 @@ const PagesSlider = ({ images, treatment }) => {
               <Image
                 src={img.path}
                 alt={img.alt}
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                style={{ objectFit: "cover" }}
                 /* placeholder="blur" */
               />
             </S.ImageContainer>

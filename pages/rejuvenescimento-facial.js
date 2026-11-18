@@ -44,14 +44,14 @@ const RejuvenescimentoFacial = () => {
         </S.Container>
         <S.NavBtnsContainer>
           <S.LinkAndIconContainer>
-            <Link href="/controlo-de-peso" passHref>
+            <Link href="/controlo-de-peso" passHref legacyBehavior>
               <S.NavLink>
                 <S.PrevIcon /> {t("rejuvenescimento-facial:previous")}
               </S.NavLink>
             </Link>
           </S.LinkAndIconContainer>
           <S.LinkAndIconContainer>
-            <Link href="/dor-inflamacao" passHref>
+            <Link href="/dor-inflamacao" passHref legacyBehavior>
               <S.NavLink>
                 {t("rejuvenescimento-facial:next")} <S.NextIcon />
               </S.NavLink>

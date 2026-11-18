@@ -37,7 +37,7 @@ const Dietetica = () => {
         </S.Container>
         <S.NavBtnsContainer>
           <S.LinkAndIconContainer>
-            <Link href="/fitoterapia" passHref>
+            <Link href="/fitoterapia" passHref legacyBehavior>
               <S.NavLink>
                 <S.PrevIcon /> {t("dietetica:previous")}
               </S.NavLink>

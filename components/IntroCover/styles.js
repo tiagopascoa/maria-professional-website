@@ -92,7 +92,7 @@ const styles = {
     transition: all 0.2s ease-in-out;
     outline: none;
     border: none;
-    :hover {
+    &:hover {
       background-color: #cc8076;
     }
   `,

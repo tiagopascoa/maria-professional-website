@@ -1,14 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextTranslate = require("next-translate");
+const nextTranslate = require("next-translate-plugin");
 
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   compiler: {
     styledComponents: true,
   },
 };
 
-module.exports = nextTranslate({
-  ...nextConfig,
-});
+module.exports = nextTranslate(nextConfig, { turbopack: true });

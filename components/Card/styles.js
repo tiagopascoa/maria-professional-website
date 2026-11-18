@@ -50,7 +50,7 @@ const styles = {
     transition: all 0.3s ease-in-out;
     outline: none;
     border: none;
-    :hover {
+    &:hover {
       background-color: ${(props) =>
         props.therapiestyles ? "#925f5b" : "#e6bbb5"};
     }

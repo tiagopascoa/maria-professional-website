@@ -7,8 +7,9 @@ const IntroCover = ({ t }) => {
       <S.StyledNextImage
         src="/images/accupuncture_cover.jpg"
         alt="acupuntura acupuntura medicina chinesa"
-        layout="fill"
-        objectFit="cover"
+        fill
+        sizes="100vw"
+        style={{ objectFit: "cover" }}
         priority={true}
       />
       <S.TopContainer>
@@ -37,7 +38,7 @@ const IntroCover = ({ t }) => {
             }
           )}
         </S.SubTitleContainer>
-        <Link href="#therapies" passHref>
+        <Link href="#therapies" passHref legacyBehavior>
           <S.Button> {t("common:knowMoreBtn")}</S.Button>
         </Link>
       </S.TopContainer>

@@ -36,7 +36,7 @@ const DorInflamacao = () => {
         </S.Container>
         <S.NavBtnsContainer>
           <S.LinkAndIconContainer>
-            <Link href="/rejuvenescimento-facial" passHref>
+            <Link href="/rejuvenescimento-facial" passHref legacyBehavior>
               <S.NavLink>
                 <S.PrevIcon /> {t("dor-inflamacao:previous")}
               </S.NavLink>

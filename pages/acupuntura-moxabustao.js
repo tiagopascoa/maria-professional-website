@@ -48,7 +48,7 @@ const AcupunturaMoxa = () => {
         </S.Container>
         <S.NavBtnsContainer>
           <S.LinkAndIconContainer style={{ marginLeft: "auto" }}>
-            <Link href="/ventosaterapia" passHref>
+            <Link href="/ventosaterapia" passHref legacyBehavior>
               <S.NavLink>
                 {t("acupuntura-moxabustao:next")} <S.NextIcon />
               </S.NavLink>

@@ -37,14 +37,14 @@ const ControloDePeso = () => {
         </S.Container>
         <S.NavBtnsContainer>
           <S.LinkAndIconContainer>
-            <Link href="/saude-estilo-de-vida" passHref>
+            <Link href="/saude-estilo-de-vida" passHref legacyBehavior>
               <S.NavLink>
                 <S.PrevIcon /> {t("controlo-de-peso:previous")}
               </S.NavLink>
             </Link>
           </S.LinkAndIconContainer>
           <S.LinkAndIconContainer>
-            <Link href="/rejuvenescimento-facial" passHref>
+            <Link href="/rejuvenescimento-facial" passHref legacyBehavior>
               <S.NavLink>
                 {t("controlo-de-peso:next")} <S.NextIcon />
               </S.NavLink>

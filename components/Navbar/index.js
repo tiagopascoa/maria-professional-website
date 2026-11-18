@@ -16,8 +16,9 @@ const Navbar = ({ toggleMobileNav, iconIsOpen, setIconOpen, t }) => {
             <Image
               src="/logo_maria.png"
               alt="Maria C. Moreira"
-              width="100%"
-              height="100%"
+              fill
+              sizes="5rem"
+              style={{ objectFit: "contain" }}
             />
           </S.LogoContainer>
           <S.NameContainer>
@@ -31,48 +32,50 @@ const Navbar = ({ toggleMobileNav, iconIsOpen, setIconOpen, t }) => {
       </S.MobileIcon>
       <S.Menu>
         <S.MenuItems>
-          <Link href="/#about" passHref>
+          <Link href="/#about" passHref legacyBehavior>
             <S.MenuLink>{t("common:navBar.aboutMe")}</S.MenuLink>
           </Link>
         </S.MenuItems>
         <S.MenuItems>
-          <Link href="/#therapies" passHref>
+          <Link href="/#therapies" passHref legacyBehavior>
             <S.MenuLink>{t("common:navBar.therapies")}</S.MenuLink>
           </Link>
         </S.MenuItems>
         <S.MenuItems>
-          <Link href="/#treatments" passHref>
+          <Link href="/#treatments" passHref legacyBehavior>
             <S.MenuLink>{t("common:navBar.treatments")}</S.MenuLink>
           </Link>
         </S.MenuItems>
         <S.MenuItems>
-          <Link href="/#contacts" passHref>
+          <Link href="/#contacts" passHref legacyBehavior>
             <S.MenuLink>{t("common:navBar.contacts")}</S.MenuLink>
           </Link>
         </S.MenuItems>
         <S.MenuItems>
           <ul style={{ display: "flex", padding: 0 }}>
             <S.MenuItems>
-              <Link href={router.asPath} locale={router.locales[0]}>
+              <Link href={router.asPath} locale={router.locales[0]} passHref legacyBehavior>
                 <S.MenuLink>
                   <Image
                     src="/pt_icon.svg"
                     alt="português"
                     width="22"
                     height="22"
+                    unoptimized
                   />
                 </S.MenuLink>
               </Link>
             </S.MenuItems>
             <S.IconDivider>|</S.IconDivider>
             <S.MenuItems>
-              <Link href={router.asPath} locale={router.locales[1]}>
+              <Link href={router.asPath} locale={router.locales[1]} passHref legacyBehavior>
                 <S.MenuLink>
                   <Image
                     src="/en_icon.svg"
                     alt="inglês"
                     width="22"
                     height="22"
+                    unoptimized
                   />
                 </S.MenuLink>
               </Link>

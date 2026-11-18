@@ -13,8 +13,9 @@ const About = ({ t }) => {
           <Image
             src="/images/about/maria_perfil2.jpg"
             alt="Maria Moreira acupuntura"
-            layout="fill"
-            objectFit="cover"
+            fill
+            sizes="(max-width: 768px) 80vw, 40vw"
+            style={{ objectFit: "cover" }}
           />
         </S.ImageContainer>
         <S.LogoGridElement>
@@ -22,8 +23,10 @@ const About = ({ t }) => {
             <S.StyledImage
               src="/images/about/logo_about_svg.svg"
               alt="Maria C. Moreira"
-              layout="fill"
-              objectFit="cover"
+              fill
+              sizes="90px"
+              style={{ objectFit: "cover" }}
+              unoptimized
             />
           </S.LogoContainer>
         </S.LogoGridElement>

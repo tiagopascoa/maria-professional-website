@@ -55,14 +55,14 @@ const Ventosaterapia = () => {
         </S.Container>
         <S.NavBtnsContainer>
           <S.LinkAndIconContainer>
-            <Link href="/acupuntura-moxabustao" passHref>
+            <Link href="/acupuntura-moxabustao" passHref legacyBehavior>
               <S.NavLink>
                 <S.PrevIcon /> {t("ventosaterapia:previous")}
               </S.NavLink>
             </Link>
           </S.LinkAndIconContainer>
           <S.LinkAndIconContainer>
-            <Link href="/massagem-tuina" passHref>
+            <Link href="/massagem-tuina" passHref legacyBehavior>
               <S.NavLink>
                 {t("ventosaterapia:next")} <S.NextIcon />
               </S.NavLink>

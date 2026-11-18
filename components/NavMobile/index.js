@@ -20,41 +20,48 @@ const NavMobile = ({
   return (
     <S.MobileNavContainer isOpen={mobileNavisOpen}>
       <S.MobileNavMenu>
-        <Link href="/#about" passHref>
+        <Link href="/#about" passHref legacyBehavior>
           <S.MobileNavLink onClick={handleClickIcon}>
             {t("common:navBar.aboutMe")}
           </S.MobileNavLink>
         </Link>
-        <Link href="/#therapies" passHref>
+        <Link href="/#therapies" passHref legacyBehavior>
           <S.MobileNavLink onClick={handleClickIcon}>
             {t("common:navBar.therapies")}
           </S.MobileNavLink>
         </Link>
-        <Link href="/#treatments" passHref>
+        <Link href="/#treatments" passHref legacyBehavior>
           <S.MobileNavLink onClick={handleClickIcon}>
             {t("common:navBar.treatments")}
           </S.MobileNavLink>
         </Link>
-        <Link href="/#contacts" passHref>
+        <Link href="/#contacts" passHref legacyBehavior>
           <S.MobileNavLink onClick={handleClickIcon}>
             {t("common:navBar.contacts")}
           </S.MobileNavLink>
         </Link>
         <div style={{ display: "flex", padding: 0 }}>
-          <Link href={router.asPath} locale={router.locales[0]}>
+          <Link href={router.asPath} locale={router.locales[0]} passHref legacyBehavior>
             <S.MobileNavLink>
               <Image
                 src="/pt_icon.svg"
                 alt="português"
                 width="30"
                 height="30"
+                unoptimized
               />
             </S.MobileNavLink>
           </Link>
           <S.IconDivider>|</S.IconDivider>
-          <Link href={router.asPath} locale={router.locales[1]}>
+          <Link href={router.asPath} locale={router.locales[1]} passHref legacyBehavior>
             <S.MobileNavLink>
-              <Image src="/en_icon.svg" alt="inglês" width="30" height="30" />
+              <Image
+                src="/en_icon.svg"
+                alt="inglês"
+                width="30"
+                height="30"
+                unoptimized
+              />
             </S.MobileNavLink>
           </Link>
         </div>

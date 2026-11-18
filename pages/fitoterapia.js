@@ -41,14 +41,14 @@ const Fitoterapia = () => {
         </S.Container>
         <S.NavBtnsContainer>
           <S.LinkAndIconContainer>
-            <Link href="/massagem-tuina" passHref>
+            <Link href="/massagem-tuina" passHref legacyBehavior>
               <S.NavLink>
                 <S.PrevIcon /> {t("fitoterapia:previous")}
               </S.NavLink>
             </Link>
           </S.LinkAndIconContainer>
           <S.LinkAndIconContainer>
-            <Link href="/dietetica" passHref>
+            <Link href="/dietetica" passHref legacyBehavior>
               <S.NavLink>
                 {t("fitoterapia:next")} <S.NextIcon />
               </S.NavLink>

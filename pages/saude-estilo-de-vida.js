@@ -38,7 +38,7 @@ const SaudeEstiloDeVida = () => {
         </S.Container>
         <S.NavBtnsContainer>
           <S.LinkAndIconContainer style={{ marginLeft: "auto" }}>
-            <Link href="/controlo-de-peso" passHref>
+            <Link href="/controlo-de-peso" passHref legacyBehavior>
               <S.NavLink>
                 {t("saude-estilo-de-vida:next")} <S.NextIcon />
               </S.NavLink>
